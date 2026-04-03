@@ -1,0 +1,1001 @@
+Age,Department,JobRole,JobLevel,JobSatisfaction,PerformanceRating,TrainingTimesLastYear,WorkLifeBalance,TotalWorkingYears,YearsAtCompany,MonthlyIncome
+38,Human Resources,Human Resources,1,3,2,4,3,15,14,7666
+52,Sales,Laboratory Technician,4,2,4,3,2,28,27,12374
+55,Human Resources,Laboratory Technician,1,3,1,2,3,30,28,9058
+45,Human Resources,Human Resources,4,2,3,5,4,26,23,12258
+56,Sales,Research Director,4,2,4,6,3,34,34,20000
+27,Sales,Healthcare Representative,4,1,3,2,2,6,6,11812
+40,Human Resources,Manufacturing Director,1,4,2,1,4,21,19,12275
+51,Research & Development,Research Director,4,4,1,1,1,33,32,20000
+28,Human Resources,Human Resources,1,1,3,0,2,5,2,6299
+31,Human Resources,Manager,4,3,2,3,1,6,4,16169
+53,Human Resources,Research Scientist,5,4,1,0,4,32,32,16358
+55,Human Resources,Manufacturing Director,4,1,3,6,2,34,30,17022
+49,Sales,Manufacturing Director,2,1,3,2,2,25,24,13895
+36,Human Resources,Laboratory Technician,4,4,2,4,4,17,13,11386
+51,Research & Development,Manufacturing Director,3,3,1,4,3,27,25,14874
+58,Sales,Human Resources,4,1,1,1,2,33,33,12578
+50,Research & Development,Manager,2,2,3,4,2,32,29,15672
+43,Research & Development,Manager,2,3,3,4,1,24,20,15096
+25,Research & Development,Sales Executive,1,3,3,6,3,5,2,7362
+41,Research & Development,Manager,5,4,1,4,1,22,22,18000
+53,Sales,Research Director,4,4,2,2,1,35,31,20000
+57,Sales,Manager,1,2,2,4,3,37,34,14678
+25,Research & Development,Laboratory Technician,5,1,1,5,3,4,1,11741
+48,Research & Development,Manager,4,4,4,4,4,24,20,17383
+38,Sales,Sales Executive,3,4,2,4,3,15,15,10029
+33,Sales,Research Scientist,4,3,3,0,2,14,11,13603
+43,Sales,Human Resources,2,4,4,2,3,20,18,9070
+38,Human Resources,Laboratory Technician,2,4,4,1,4,19,15,9263
+31,Human Resources,Research Director,3,4,2,0,4,10,9,16687
+22,Human Resources,Research Scientist,1,4,4,3,4,0,0,9213
+43,Research & Development,Laboratory Technician,5,3,4,2,3,18,18,13357
+47,Human Resources,Healthcare Representative,4,2,2,5,3,22,20,12625
+39,Research & Development,Manufacturing Director,2,2,2,2,1,14,11,13210
+35,Research & Development,Healthcare Representative,1,1,4,3,1,16,15,8838
+50,Human Resources,Manager,3,4,3,3,2,31,31,16781
+33,Research & Development,Research Scientist,2,3,1,3,1,10,8,11282
+57,Human Resources,Manager,3,1,4,6,2,33,31,17382
+56,Human Resources,Manufacturing Director,4,1,4,1,4,38,38,18063
+33,Sales,Laboratory Technician,5,2,3,4,1,14,14,12523
+28,Human Resources,Manufacturing Director,2,3,4,2,3,4,1,12725
+50,Sales,Sales Executive,2,3,4,6,1,27,27,10182
+32,Human Resources,Manufacturing Director,4,3,1,4,2,13,10,15187
+54,Human Resources,Sales Executive,1,2,1,4,1,29,26,8832
+27,Sales,Manufacturing Director,5,2,1,5,4,2,0,14998
+36,Sales,Human Resources,2,2,2,3,3,15,13,8228
+53,Human Resources,Sales Executive,5,2,2,1,2,33,31,14013
+32,Research & Development,Research Scientist,2,2,1,5,3,10,8,10838
+44,Sales,Manager,5,4,1,0,3,26,22,18341
+47,Research & Development,Research Director,3,4,2,6,2,27,24,18569
+55,Research & Development,Manager,2,3,3,6,3,36,33,15497
+55,Research & Development,Healthcare Representative,5,1,4,1,3,31,31,15493
+50,Sales,Manager,1,3,4,4,1,31,27,14974
+25,Research & Development,Laboratory Technician,3,1,1,6,3,1,1,9084
+38,Sales,Human Resources,3,2,3,1,3,14,10,9802
+56,Research & Development,Manufacturing Director,1,1,2,6,3,36,36,13374
+34,Human Resources,Healthcare Representative,5,3,1,6,3,12,11,13362
+36,Human Resources,Laboratory Technician,4,3,3,3,2,15,13,11775
+50,Sales,Laboratory Technician,1,1,3,0,4,30,28,8959
+50,Human Resources,Sales Executive,5,4,3,3,1,28,25,14374
+32,Human Resources,Manager,1,2,2,0,3,7,6,12352
+53,Research & Development,Research Scientist,1,2,2,6,3,28,26,11774
+23,Sales,Research Director,2,3,4,5,2,0,0,14777
+35,Research & Development,Research Scientist,5,4,4,4,4,12,11,15711
+41,Research & Development,Healthcare Representative,4,1,3,6,3,22,20,13071
+43,Research & Development,Human Resources,2,2,3,0,2,24,24,8994
+32,Research & Development,Research Scientist,1,4,2,0,1,8,4,9534
+48,Research & Development,Manufacturing Director,1,2,4,0,1,25,24,13292
+24,Research & Development,Research Scientist,1,4,3,6,3,6,3,9300
+38,Research & Development,Healthcare Representative,5,4,4,1,3,16,15,14485
+49,Sales,Research Director,5,3,4,5,4,31,28,20000
+50,Human Resources,Research Scientist,2,2,3,1,4,32,31,12574
+42,Research & Development,Manufacturing Director,4,1,2,4,3,17,14,15270
+37,Research & Development,Sales Executive,2,3,3,6,2,19,17,9779
+58,Research & Development,Human Resources,3,3,3,0,4,39,39,11405
+41,Research & Development,Healthcare Representative,1,1,4,5,3,21,19,9328
+27,Research & Development,Sales Executive,1,3,3,5,4,4,4,7519
+40,Research & Development,Sales Executive,1,4,2,2,3,18,16,8111
+26,Human Resources,Sales Executive,2,4,3,4,1,1,0,8259
+24,Human Resources,Laboratory Technician,2,2,2,5,3,6,5,8397
+22,Research & Development,Human Resources,1,2,2,6,1,2,0,5910
+59,Human Resources,Research Director,2,1,4,0,4,36,33,17720
+36,Sales,Manager,5,2,1,0,3,12,9,16728
+55,Research & Development,Human Resources,5,4,1,5,4,31,28,12939
+56,Sales,Laboratory Technician,2,1,4,1,1,32,32,11047
+46,Sales,Manager,1,1,3,4,3,27,24,14305
+45,Research & Development,Human Resources,2,2,4,0,4,23,20,10007
+33,Human Resources,Sales Executive,2,4,2,5,1,9,8,8740
+39,Sales,Healthcare Representative,2,1,1,0,4,20,18,10332
+36,Research & Development,Manager,3,4,4,5,2,15,12,15470
+37,Sales,Manufacturing Director,5,4,3,4,1,18,14,16958
+48,Sales,Manufacturing Director,4,4,4,5,1,23,20,16040
+29,Sales,Research Scientist,4,2,1,2,1,10,10,13460
+46,Sales,Manager,3,3,4,5,3,24,24,16773
+38,Human Resources,Healthcare Representative,2,3,4,5,3,18,18,10797
+50,Sales,Research Director,3,1,1,6,3,32,29,18724
+29,Sales,Laboratory Technician,3,4,2,4,2,10,9,10067
+36,Sales,Sales Executive,1,2,2,6,2,12,8,7502
+48,Human Resources,Research Scientist,5,4,1,5,1,23,20,15792
+28,Sales,Manufacturing Director,4,4,4,4,2,5,4,15011
+24,Sales,Laboratory Technician,2,2,1,2,4,0,0,7748
+50,Human Resources,Laboratory Technician,4,3,2,4,1,25,22,12054
+45,Human Resources,Sales Executive,4,4,3,0,1,24,21,12114
+24,Human Resources,Research Director,5,4,4,6,4,6,5,19005
+41,Sales,Research Director,4,3,2,4,1,18,17,18657
+36,Human Resources,Manager,4,2,4,2,2,15,14,16513
+46,Human Resources,Manufacturing Director,3,1,1,3,3,26,23,15097
+51,Sales,Research Director,5,3,3,5,4,26,25,20000
+35,Human Resources,Healthcare Representative,1,1,1,4,2,14,14,8415
+28,Sales,Research Director,2,1,3,5,4,10,7,15911
+38,Research & Development,Laboratory Technician,4,3,4,1,4,20,20,11511
+41,Human Resources,Sales Executive,2,4,4,0,1,21,19,9816
+57,Research & Development,Healthcare Representative,1,1,1,6,1,39,36,10853
+30,Sales,Manager,2,1,3,0,2,5,3,13669
+59,Human Resources,Manufacturing Director,1,2,3,1,4,34,33,13418
+43,Sales,Manager,3,4,4,1,1,25,24,16306
+23,Research & Development,Laboratory Technician,4,1,1,6,1,2,0,10384
+45,Sales,Healthcare Representative,1,2,3,4,4,20,19,9748
+29,Human Resources,Healthcare Representative,2,4,4,1,2,5,3,9579
+32,Human Resources,Healthcare Representative,4,3,2,3,2,14,13,12466
+34,Research & Development,Laboratory Technician,3,3,1,5,4,9,6,9041
+38,Sales,Laboratory Technician,4,2,2,5,2,16,15,10935
+29,Human Resources,Manager,1,3,1,2,1,9,5,12273
+42,Research & Development,Research Scientist,3,1,4,1,4,24,23,13747
+39,Human Resources,Manager,2,4,3,1,1,14,12,13777
+51,Human Resources,Manufacturing Director,3,1,3,3,3,29,27,15996
+39,Sales,Sales Executive,3,1,3,0,3,14,13,10435
+52,Human Resources,Healthcare Representative,5,3,1,0,2,27,25,14185
+59,Sales,Research Scientist,3,1,4,5,3,38,36,14810
+53,Human Resources,Sales Executive,3,3,2,5,1,29,25,11363
+32,Research & Development,Research Scientist,4,4,4,4,3,14,11,13981
+46,Human Resources,Research Director,2,4,2,6,1,26,22,16662
+54,Sales,Research Director,4,1,1,3,2,36,36,20000
+59,Sales,Human Resources,4,2,1,6,2,35,31,12655
+29,Research & Development,Research Director,1,3,2,6,1,6,5,13808
+32,Human Resources,Manager,4,3,2,2,3,11,8,16467
+43,Human Resources,Research Director,5,1,2,6,2,22,21,19939
+45,Research & Development,Laboratory Technician,5,3,4,2,4,21,21,13649
+38,Human Resources,Healthcare Representative,1,3,2,6,2,19,16,8909
+33,Human Resources,Manager,2,2,1,3,3,12,10,13739
+53,Sales,Sales Executive,2,2,1,2,4,35,31,10146
+36,Human Resources,Human Resources,4,1,3,0,3,12,11,11334
+37,Human Resources,Human Resources,4,2,2,2,1,16,16,11194
+43,Research & Development,Human Resources,4,1,4,2,4,18,16,11253
+49,Research & Development,Sales Executive,2,4,4,3,3,25,21,10657
+41,Sales,Sales Executive,3,1,4,3,4,17,15,10483
+54,Human Resources,Sales Executive,5,4,3,2,3,36,32,14500
+31,Human Resources,Sales Executive,3,1,1,1,4,9,6,9493
+53,Human Resources,Human Resources,3,3,4,3,3,32,30,11515
+54,Sales,Human Resources,2,2,1,4,1,33,31,10083
+23,Sales,Research Scientist,3,4,3,4,4,0,0,11512
+54,Research & Development,Manager,1,1,2,0,4,29,26,13782
+54,Sales,Healthcare Representative,4,2,2,6,4,29,29,13687
+34,Human Resources,Research Director,1,1,2,2,4,14,10,15219
+51,Human Resources,Research Director,5,2,4,1,1,26,24,20000
+54,Sales,Laboratory Technician,4,2,2,0,4,33,30,12850
+34,Human Resources,Human Resources,3,1,4,2,2,15,15,10518
+47,Human Resources,Laboratory Technician,5,4,3,3,1,25,21,13880
+43,Sales,Manager,4,4,3,4,2,19,16,17093
+23,Sales,Manager,3,3,4,5,4,0,0,14806
+59,Human Resources,Laboratory Technician,1,2,1,1,3,37,35,9129
+47,Human Resources,Human Resources,4,3,2,5,2,29,29,12265
+36,Human Resources,Laboratory Technician,3,3,2,4,4,18,15,10414
+55,Research & Development,Research Director,1,1,2,6,2,36,36,16095
+32,Research & Development,Research Scientist,5,1,4,6,4,9,7,15124
+24,Research & Development,Research Director,5,1,3,5,4,2,2,18301
+27,Sales,Manufacturing Director,5,2,2,3,4,2,2,15855
+30,Research & Development,Human Resources,5,1,3,2,3,9,8,11698
+27,Sales,Human Resources,2,1,2,3,2,8,8,8161
+30,Sales,Healthcare Representative,4,2,2,5,1,7,3,11465
+52,Research & Development,Sales Executive,4,2,4,3,1,33,30,13405
+53,Research & Development,Manufacturing Director,2,4,1,4,1,31,30,14311
+33,Research & Development,Manager,3,1,4,1,1,12,9,15139
+29,Human Resources,Human Resources,3,1,2,3,4,10,7,9447
+29,Research & Development,Laboratory Technician,5,1,2,4,2,6,4,11797
+49,Human Resources,Manufacturing Director,1,4,1,1,2,25,23,12017
+41,Sales,Healthcare Representative,3,1,3,6,3,19,18,11456
+28,Human Resources,Manager,1,4,3,2,2,4,2,11928
+32,Research & Development,Sales Executive,4,3,2,5,2,7,5,10915
+41,Sales,Sales Executive,1,4,3,6,2,17,15,8759
+37,Sales,Healthcare Representative,4,3,2,2,3,13,10,12214
+25,Sales,Healthcare Representative,2,1,1,6,1,5,4,8599
+27,Human Resources,Laboratory Technician,2,3,1,0,2,5,2,7560
+43,Research & Development,Human Resources,5,4,2,6,3,18,14,12832
+47,Sales,Sales Executive,3,2,1,4,3,23,20,10644
+24,Sales,Manager,5,3,4,1,4,6,2,17133
+35,Sales,Manufacturing Director,4,3,4,6,3,14,14,15505
+32,Human Resources,Manager,5,1,1,3,1,9,9,16747
+39,Human Resources,Research Scientist,1,4,2,2,2,15,11,9902
+33,Research & Development,Research Scientist,4,3,2,6,3,8,4,12902
+44,Human Resources,Healthcare Representative,2,3,1,1,1,20,17,10386
+33,Sales,Laboratory Technician,3,3,3,4,3,10,6,9581
+34,Research & Development,Research Scientist,4,3,4,0,3,9,8,13760
+46,Sales,Sales Executive,4,2,3,2,3,24,24,12312
+40,Sales,Manager,1,4,2,5,3,15,15,13037
+57,Human Resources,Manager,3,1,2,1,3,35,31,16306
+29,Research & Development,Healthcare Representative,2,1,3,5,1,4,2,9458
+50,Human Resources,Human Resources,4,2,1,1,2,32,30,12495
+53,Human Resources,Human Resources,4,4,3,1,2,34,30,12211
+39,Research & Development,Manufacturing Director,1,3,3,4,2,16,15,12514
+27,Sales,Healthcare Representative,5,2,4,4,2,4,2,12809
+39,Sales,Research Director,2,4,4,4,1,14,10,16690
+40,Research & Development,Manufacturing Director,3,3,3,6,4,21,20,14855
+43,Sales,Research Director,4,2,3,3,4,19,18,18930
+58,Research & Development,Human Resources,4,4,2,1,1,35,32,12461
+53,Research & Development,Healthcare Representative,2,1,4,2,1,35,34,11552
+24,Human Resources,Research Director,5,1,4,5,3,2,0,19213
+49,Research & Development,Healthcare Representative,4,4,2,4,3,27,25,13345
+31,Human Resources,Healthcare Representative,2,1,1,6,3,10,6,9543
+56,Sales,Human Resources,1,4,4,4,2,36,32,9369
+50,Sales,Manufacturing Director,5,3,4,5,3,31,30,18757
+36,Sales,Manufacturing Director,3,4,1,5,4,16,16,13943
+54,Sales,Healthcare Representative,4,3,4,1,2,34,31,13931
+28,Human Resources,Research Scientist,2,2,4,4,3,6,6,11088
+33,Sales,Laboratory Technician,1,4,1,5,2,15,14,6906
+51,Research & Development,Human Resources,3,2,1,3,4,33,32,11181
+42,Research & Development,Laboratory Technician,2,1,3,3,3,21,21,9647
+52,Research & Development,Laboratory Technician,2,3,2,4,4,32,29,9856
+45,Human Resources,Manufacturing Director,3,4,2,6,4,25,25,15334
+41,Sales,Manufacturing Director,1,2,1,5,4,16,12,12055
+58,Sales,Research Scientist,1,3,1,1,3,33,31,11774
+25,Sales,Laboratory Technician,5,3,4,1,1,0,0,11466
+49,Human Resources,Laboratory Technician,4,1,3,6,3,25,23,11949
+41,Research & Development,Healthcare Representative,3,1,3,1,4,21,20,12295
+45,Research & Development,Manufacturing Director,3,3,1,0,3,27,24,15054
+53,Sales,Laboratory Technician,3,3,4,4,4,35,35,11739
+57,Research & Development,Manager,1,4,4,1,1,33,30,14519
+55,Research & Development,Research Scientist,4,3,2,3,2,37,37,16066
+57,Human Resources,Research Director,5,4,2,5,1,36,32,20000
+23,Human Resources,Manager,2,3,4,2,1,4,0,13854
+36,Human Resources,Manager,2,1,2,6,2,14,14,13890
+55,Human Resources,Research Director,3,4,1,2,3,35,32,18874
+57,Sales,Human Resources,4,2,4,1,2,39,39,13638
+27,Human Resources,Human Resources,1,1,2,2,3,5,4,6700
+33,Research & Development,Research Scientist,4,4,3,2,3,15,11,14054
+24,Sales,Manager,4,4,4,0,4,5,4,15865
+39,Research & Development,Laboratory Technician,1,2,4,3,4,14,10,7709
+42,Research & Development,Manufacturing Director,3,4,3,6,2,22,18,15333
+36,Research & Development,Research Scientist,4,3,1,3,1,13,11,13442
+54,Human Resources,Healthcare Representative,2,2,3,0,2,30,29,10957
+56,Human Resources,Research Director,1,1,4,0,3,32,31,16580
+47,Sales,Manager,5,1,1,2,4,27,25,18163
+29,Sales,Research Scientist,3,3,2,4,2,10,7,11914
+57,Human Resources,Sales Executive,1,1,2,5,2,32,31,9069
+51,Research & Development,Sales Executive,5,4,2,5,4,27,27,13300
+44,Sales,Human Resources,5,4,4,2,4,19,17,13135
+35,Human Resources,Research Director,4,3,3,5,4,14,13,18192
+35,Human Resources,Manufacturing Director,4,1,1,0,3,13,10,14773
+23,Human Resources,Laboratory Technician,4,1,2,3,4,4,3,10612
+58,Research & Development,Manufacturing Director,1,3,1,5,1,35,31,13583
+26,Human Resources,Manufacturing Director,1,2,4,6,2,4,4,11409
+59,Human Resources,Manufacturing Director,3,1,2,2,4,37,35,16079
+35,Human Resources,Research Director,4,2,4,4,4,14,10,19012
+46,Human Resources,Manufacturing Director,5,1,3,2,3,22,19,17262
+41,Sales,Healthcare Representative,2,1,4,1,3,18,14,10178
+23,Sales,Research Director,3,1,4,2,2,0,0,16018
+27,Human Resources,Healthcare Representative,1,1,3,0,1,7,4,8194
+38,Research & Development,Research Director,3,4,1,3,2,16,12,16915
+46,Sales,Human Resources,3,2,3,3,4,26,24,10818
+49,Human Resources,Research Scientist,3,2,3,6,1,24,23,13735
+23,Sales,Sales Executive,3,1,4,5,1,1,0,9253
+56,Sales,Manufacturing Director,2,1,1,0,1,32,30,13850
+58,Research & Development,Human Resources,4,2,2,1,1,36,35,12403
+26,Human Resources,Research Scientist,5,4,3,0,2,1,0,13826
+22,Human Resources,Sales Executive,3,3,1,2,3,1,0,9346
+33,Research & Development,Manager,3,3,3,0,3,13,11,15023
+57,Research & Development,Laboratory Technician,3,2,3,0,4,39,35,11832
+44,Human Resources,Healthcare Representative,4,1,3,6,3,24,21,13454
+52,Human Resources,Manager,1,1,3,1,3,28,27,14257
+32,Research & Development,Research Director,1,4,4,2,3,10,6,15228
+31,Sales,Sales Executive,2,3,1,4,3,7,6,8611
+24,Sales,Manager,1,4,1,6,4,3,1,11533
+35,Research & Development,Laboratory Technician,3,3,1,4,2,13,13,9478
+37,Sales,Human Resources,3,2,3,6,1,19,15,10517
+31,Research & Development,Sales Executive,3,3,4,3,3,9,5,9841
+50,Sales,Manager,2,4,3,6,2,32,31,15830
+31,Sales,Healthcare Representative,3,4,3,5,3,7,5,11128
+33,Human Resources,Healthcare Representative,1,4,1,0,3,9,6,7724
+51,Human Resources,Research Scientist,4,2,3,3,1,26,24,14945
+22,Sales,Manager,4,3,2,1,1,3,0,15398
+26,Sales,Manufacturing Director,5,3,3,4,1,7,4,16091
+41,Human Resources,Manager,1,4,2,6,3,20,18,13469
+29,Human Resources,Human Resources,3,3,3,0,3,10,10,9715
+33,Human Resources,Sales Executive,4,1,4,1,3,8,7,11761
+22,Research & Development,Sales Executive,1,1,4,5,1,2,0,7633
+41,Sales,Human Resources,4,1,1,1,4,23,21,11458
+49,Human Resources,Manager,3,3,3,0,2,27,27,16622
+58,Sales,Human Resources,4,2,2,5,4,34,30,12855
+58,Research & Development,Laboratory Technician,5,2,2,1,3,36,35,13800
+33,Research & Development,Research Director,5,2,3,5,3,11,9,19358
+58,Human Resources,Human Resources,4,2,2,6,4,35,32,12221
+49,Research & Development,Healthcare Representative,1,1,4,6,3,29,27,10077
+36,Sales,Human Resources,1,1,2,0,2,13,12,7352
+27,Human Resources,Sales Executive,1,4,1,0,3,8,6,7106
+41,Sales,Healthcare Representative,4,3,4,5,2,19,19,13389
+35,Sales,Sales Executive,1,3,4,2,4,17,15,8408
+23,Research & Development,Research Scientist,3,2,4,3,4,0,0,11624
+30,Research & Development,Manufacturing Director,5,1,3,1,3,12,9,16773
+58,Research & Development,Sales Executive,3,2,3,1,2,36,36,12517
+41,Research & Development,Healthcare Representative,1,4,4,2,3,21,21,9415
+47,Research & Development,Research Scientist,3,3,3,2,1,29,27,13702
+50,Human Resources,Sales Executive,1,3,2,2,1,27,24,9171
+22,Sales,Laboratory Technician,4,2,3,4,1,0,0,10568
+56,Sales,Human Resources,3,4,3,4,1,34,32,11677
+27,Sales,Manufacturing Director,4,3,4,5,3,6,5,15023
+58,Sales,Sales Executive,4,4,1,4,1,38,37,13604
+26,Research & Development,Research Scientist,2,4,1,6,2,6,3,10702
+54,Sales,Laboratory Technician,1,2,1,6,4,33,29,8345
+35,Human Resources,Manager,5,1,2,0,4,17,16,17495
+33,Human Resources,Research Scientist,1,2,3,5,1,11,7,9806
+41,Sales,Human Resources,5,1,1,1,1,21,21,11983
+45,Sales,Research Scientist,1,4,4,3,1,21,20,11428
+55,Human Resources,Laboratory Technician,4,1,1,0,3,33,32,12854
+46,Human Resources,Research Scientist,3,4,1,1,4,24,21,13199
+50,Research & Development,Laboratory Technician,3,3,3,1,1,27,23,10814
+52,Human Resources,Sales Executive,2,3,3,5,2,32,31,10516
+44,Research & Development,Research Director,5,3,3,2,1,24,23,20000
+59,Research & Development,Laboratory Technician,5,2,2,2,4,38,35,14239
+41,Research & Development,Laboratory Technician,5,2,2,0,1,18,15,12428
+44,Research & Development,Manufacturing Director,4,4,1,2,4,26,22,16089
+37,Research & Development,Laboratory Technician,5,3,3,1,1,18,18,12891
+29,Sales,Laboratory Technician,3,2,1,2,2,11,11,9779
+42,Human Resources,Manager,4,3,4,4,1,24,22,17728
+22,Research & Development,Research Director,1,2,4,2,2,0,0,14284
+29,Human Resources,Sales Executive,5,1,3,1,2,9,5,12913
+50,Human Resources,Human Resources,5,1,3,5,1,28,27,13615
+53,Research & Development,Manufacturing Director,1,3,4,0,2,30,26,13468
+59,Sales,Manager,5,4,3,3,3,38,34,19437
+26,Research & Development,Healthcare Representative,1,2,2,2,1,3,0,7949
+43,Sales,Research Director,4,2,2,6,1,22,21,18596
+55,Human Resources,Sales Executive,3,1,3,6,2,37,34,12235
+22,Sales,Sales Executive,1,1,4,1,2,3,2,7026
+47,Sales,Healthcare Representative,2,4,1,3,1,24,20,10438
+31,Sales,Human Resources,1,4,3,3,3,10,8,7353
+51,Human Resources,Laboratory Technician,5,4,3,4,2,28,28,13338
+39,Human Resources,Manager,4,3,1,3,2,20,16,16562
+38,Sales,Research Scientist,4,1,3,6,4,20,18,14436
+47,Sales,Manufacturing Director,1,3,1,5,3,24,21,12129
+29,Research & Development,Research Scientist,3,1,4,1,3,5,1,12395
+33,Sales,Healthcare Representative,2,1,2,1,1,12,10,10013
+48,Research & Development,Sales Executive,4,2,4,2,3,29,25,12900
+29,Sales,Human Resources,5,1,2,2,1,8,7,11362
+46,Research & Development,Sales Executive,5,1,1,2,4,25,23,13663
+25,Human Resources,Manufacturing Director,3,3,2,6,3,0,0,13201
+54,Sales,Sales Executive,4,1,4,6,2,35,34,14050
+22,Sales,Sales Executive,1,3,2,6,4,0,0,7241
+40,Sales,Manufacturing Director,5,4,1,6,1,19,19,16371
+52,Sales,Manager,3,1,2,6,4,32,30,17053
+37,Research & Development,Manager,4,1,3,6,1,12,12,16161
+35,Sales,Manufacturing Director,4,3,4,5,4,11,7,15257
+26,Human Resources,Human Resources,4,4,3,6,1,5,1,10450
+47,Human Resources,Healthcare Representative,4,2,1,3,3,29,27,13507
+49,Sales,Research Director,4,4,2,3,2,28,24,18947
+23,Human Resources,Sales Executive,5,3,3,4,1,0,0,12106
+27,Sales,Human Resources,3,4,3,5,4,4,3,8754
+30,Sales,Sales Executive,4,3,2,2,1,10,9,11374
+54,Human Resources,Research Director,2,3,2,0,1,36,36,17740
+46,Sales,Healthcare Representative,2,2,4,6,1,22,18,10761
+34,Human Resources,Manager,3,1,3,4,4,16,16,15017
+30,Research & Development,Human Resources,1,3,3,0,2,9,8,6655
+34,Sales,Laboratory Technician,1,3,1,3,3,11,10,7401
+52,Research & Development,Laboratory Technician,1,2,4,4,2,33,29,9360
+32,Human Resources,Research Director,2,3,1,4,1,12,9,15278
+25,Research & Development,Laboratory Technician,1,1,3,1,4,6,3,6927
+55,Research & Development,Manager,5,2,1,3,2,35,31,19307
+59,Human Resources,Research Director,4,1,3,3,1,35,31,20000
+25,Research & Development,Manager,2,1,3,5,3,3,3,13603
+59,Research & Development,Healthcare Representative,3,2,1,4,3,39,35,12498
+40,Human Resources,Sales Executive,3,3,1,6,3,18,15,10687
+27,Research & Development,Healthcare Representative,4,1,2,3,1,8,4,12234
+55,Human Resources,Healthcare Representative,2,1,2,4,4,35,35,11372
+39,Research & Development,Manager,1,1,2,5,2,15,15,12460
+34,Human Resources,Research Director,1,1,3,6,3,9,9,14706
+44,Human Resources,Research Director,5,2,1,5,1,20,20,20000
+40,Research & Development,Laboratory Technician,5,2,4,1,1,16,14,12687
+32,Research & Development,Research Scientist,1,4,3,6,2,7,3,9733
+22,Research & Development,Sales Executive,3,4,4,4,3,0,0,10075
+45,Sales,Manager,3,1,1,3,1,22,18,15792
+28,Sales,Laboratory Technician,5,3,3,3,2,8,6,11548
+46,Sales,Human Resources,4,1,4,4,4,27,27,12560
+42,Human Resources,Research Scientist,1,3,4,4,4,19,17,10963
+36,Research & Development,Research Scientist,5,1,2,4,4,11,8,14392
+22,Human Resources,Manager,5,4,2,2,3,0,0,16888
+33,Sales,Manufacturing Director,1,4,2,6,2,14,10,11424
+28,Research & Development,Sales Executive,1,3,3,3,2,6,2,7384
+36,Human Resources,Research Scientist,3,1,1,6,1,12,11,12457
+42,Research & Development,Manager,4,3,1,5,1,21,20,17032
+40,Human Resources,Manager,4,4,2,3,1,16,13,16176
+50,Research & Development,Laboratory Technician,1,1,2,2,2,26,26,8757
+46,Sales,Human Resources,2,1,2,4,1,25,23,9573
+54,Sales,Manufacturing Director,5,3,4,1,2,34,33,18779
+53,Research & Development,Sales Executive,5,2,2,4,2,28,27,13454
+56,Human Resources,Research Director,1,3,4,4,4,34,34,16340
+59,Sales,Healthcare Representative,2,4,1,2,1,35,35,11552
+47,Sales,Human Resources,3,4,3,6,4,26,22,10344
+32,Sales,Human Resources,1,4,3,3,3,9,7,6795
+56,Research & Development,Laboratory Technician,1,4,3,4,3,32,32,9484
+29,Research & Development,Research Director,5,4,3,3,3,7,6,18898
+35,Human Resources,Research Scientist,1,2,4,0,2,10,9,10101
+31,Human Resources,Research Scientist,1,1,4,5,2,7,4,9951
+23,Human Resources,Laboratory Technician,1,3,2,6,2,0,0,6421
+30,Research & Development,Manager,5,3,4,3,1,10,6,18068
+24,Research & Development,Research Scientist,3,4,2,1,4,6,4,11848
+42,Human Resources,Manufacturing Director,3,3,2,5,2,21,17,14412
+47,Human Resources,Sales Executive,1,4,3,1,4,24,23,8614
+29,Research & Development,Human Resources,5,2,4,4,4,6,2,12186
+23,Human Resources,Human Resources,3,2,4,5,4,4,3,8731
+27,Sales,Manufacturing Director,3,1,2,3,1,2,1,13565
+49,Research & Development,Research Director,3,2,2,5,1,30,29,18820
+50,Human Resources,Research Scientist,5,2,1,4,3,28,27,16128
+47,Research & Development,Human Resources,5,1,1,2,3,22,21,12136
+46,Sales,Healthcare Representative,1,3,2,6,4,22,19,9076
+33,Research & Development,Research Director,4,4,1,1,3,15,11,17710
+26,Research & Development,Sales Executive,3,4,1,4,4,2,0,9105
+55,Research & Development,Sales Executive,4,3,2,2,1,32,29,13089
+58,Research & Development,Human Resources,5,1,2,5,1,36,36,13443
+36,Sales,Laboratory Technician,5,3,4,5,1,15,15,12850
+57,Research & Development,Research Director,5,2,2,4,2,35,35,20000
+36,Research & Development,Human Resources,4,1,2,3,4,12,10,10377
+44,Human Resources,Laboratory Technician,5,1,3,5,1,23,23,13457
+27,Research & Development,Human Resources,1,1,4,3,4,5,1,7398
+42,Human Resources,Healthcare Representative,5,4,4,3,3,24,21,15043
+44,Sales,Research Director,2,3,4,6,3,26,22,17139
+37,Sales,Manager,4,1,3,3,1,15,15,16484
+36,Sales,Sales Executive,2,1,2,0,4,15,13,8755
+46,Sales,Human Resources,5,1,4,6,1,22,20,12677
+57,Human Resources,Healthcare Representative,1,3,4,2,3,35,32,11199
+32,Research & Development,Laboratory Technician,3,4,1,2,1,11,7,9232
+36,Sales,Laboratory Technician,5,2,4,5,4,16,15,13177
+25,Research & Development,Sales Executive,1,4,2,5,3,7,3,7639
+42,Human Resources,Manufacturing Director,4,1,2,3,2,22,22,16262
+34,Human Resources,Human Resources,2,4,1,6,3,10,9,8244
+43,Human Resources,Research Director,2,4,4,6,2,22,20,16639
+40,Sales,Research Scientist,2,2,4,0,1,20,17,12214
+55,Research & Development,Laboratory Technician,4,3,4,3,1,34,31,13489
+35,Research & Development,Research Director,1,3,3,0,4,13,11,14574
+25,Research & Development,Research Director,4,4,4,3,2,1,1,18034
+48,Human Resources,Manager,2,4,2,1,1,28,26,15247
+50,Sales,Research Director,5,3,2,1,2,31,31,20000
+49,Human Resources,Research Director,3,3,3,4,1,27,26,17939
+56,Human Resources,Manager,4,2,3,3,3,38,36,18586
+29,Research & Development,Laboratory Technician,4,1,4,6,1,10,10,10721
+37,Human Resources,Research Director,1,4,1,5,4,18,17,14816
+57,Research & Development,Manufacturing Director,1,3,3,2,3,32,30,13702
+51,Sales,Manufacturing Director,4,4,3,4,4,26,23,16419
+39,Research & Development,Healthcare Representative,2,4,4,5,3,15,13,10636
+23,Sales,Manager,3,3,4,1,2,3,0,14709
+34,Research & Development,Healthcare Representative,1,2,3,3,4,14,12,8512
+25,Human Resources,Manager,2,4,1,4,1,5,1,12691
+47,Human Resources,Human Resources,5,2,3,3,2,26,25,12782
+46,Sales,Human Resources,1,3,4,1,1,24,22,8315
+51,Sales,Research Director,2,1,4,4,3,31,30,17186
+32,Sales,Research Scientist,2,1,3,1,3,10,9,11439
+28,Research & Development,Human Resources,3,4,1,0,1,4,4,8686
+52,Research & Development,Research Scientist,3,3,3,1,1,33,32,14070
+31,Sales,Human Resources,5,2,3,6,2,11,10,12353
+34,Human Resources,Sales Executive,2,4,4,6,1,10,8,9273
+52,Research & Development,Human Resources,2,3,1,3,4,32,30,9399
+28,Research & Development,Healthcare Representative,3,3,2,2,4,3,0,9829
+57,Research & Development,Laboratory Technician,1,2,1,1,1,34,34,8651
+41,Sales,Research Director,1,4,3,5,4,17,16,15116
+25,Sales,Healthcare Representative,4,3,3,6,1,5,5,11532
+28,Sales,Laboratory Technician,3,3,3,2,2,10,6,9653
+22,Sales,Manufacturing Director,4,3,1,0,4,0,0,13832
+34,Sales,Healthcare Representative,3,2,4,4,4,10,10,11138
+43,Human Resources,Manufacturing Director,5,4,3,4,1,25,22,17474
+42,Human Resources,Research Scientist,2,4,3,6,4,24,21,12211
+43,Sales,Research Scientist,5,4,1,2,3,22,21,15304
+49,Research & Development,Sales Executive,3,4,2,6,2,31,27,11843
+30,Sales,Human Resources,2,1,2,4,2,10,7,8027
+47,Human Resources,Healthcare Representative,1,1,4,1,4,26,23,10236
+30,Human Resources,Manufacturing Director,1,4,4,2,4,5,1,11029
+36,Research & Development,Laboratory Technician,4,2,3,3,3,16,16,11120
+31,Human Resources,Research Scientist,3,1,1,1,3,12,9,12174
+45,Sales,Human Resources,3,3,3,1,4,27,25,10452
+29,Research & Development,Research Scientist,1,1,4,1,4,4,1,9945
+45,Sales,Laboratory Technician,5,3,1,3,3,22,22,12543
+37,Sales,Human Resources,2,4,1,0,1,13,13,8595
+47,Research & Development,Human Resources,5,1,4,5,3,29,28,14042
+48,Sales,Manufacturing Director,5,2,2,6,1,26,24,17634
+58,Human Resources,Manufacturing Director,1,1,2,4,2,33,33,12962
+25,Sales,Healthcare Representative,1,1,1,6,2,3,0,7883
+45,Research & Development,Healthcare Representative,1,1,3,2,3,27,25,9922
+40,Research & Development,Manager,4,4,2,0,1,18,16,16684
+57,Research & Development,Research Director,5,2,3,2,3,39,35,20000
+31,Sales,Manager,3,1,2,6,3,7,4,14741
+46,Research & Development,Sales Executive,2,2,2,4,1,23,19,9479
+39,Research & Development,Research Scientist,4,4,3,3,3,15,11,13956
+40,Sales,Healthcare Representative,3,3,4,6,2,20,17,12212
+57,Human Resources,Manufacturing Director,5,1,2,1,4,32,29,17482
+31,Sales,Laboratory Technician,1,2,2,6,4,9,6,7587
+54,Research & Development,Manufacturing Director,5,2,3,1,3,30,27,18235
+26,Research & Development,Research Scientist,2,4,4,3,1,8,5,11719
+56,Sales,Manager,4,1,2,6,1,32,28,17529
+55,Human Resources,Manufacturing Director,4,3,2,0,2,31,30,17038
+54,Research & Development,Research Director,2,2,4,0,1,29,28,17684
+42,Research & Development,Sales Executive,3,1,2,2,1,19,19,10552
+38,Research & Development,Research Scientist,3,3,4,3,2,19,18,13004
+43,Sales,Manager,4,2,4,0,3,19,18,17240
+58,Research & Development,Research Director,4,2,3,6,4,33,29,19570
+36,Human Resources,Laboratory Technician,1,3,1,3,2,14,11,7560
+56,Research & Development,Manager,3,3,4,4,3,38,35,17179
+49,Research & Development,Human Resources,2,4,3,1,2,29,25,10209
+28,Human Resources,Research Director,3,1,1,6,3,9,8,16382
+53,Research & Development,Research Director,1,1,2,1,2,32,28,16481
+32,Sales,Sales Executive,4,4,1,1,3,13,13,11128
+31,Sales,Research Scientist,4,2,4,3,2,13,10,14292
+30,Sales,Laboratory Technician,1,3,4,3,3,11,9,7847
+35,Human Resources,Sales Executive,2,3,4,2,2,17,17,9558
+34,Research & Development,Manager,4,3,4,1,4,9,9,16676
+46,Sales,Sales Executive,5,2,4,2,4,25,21,13870
+23,Human Resources,Research Director,4,3,3,1,1,0,0,16998
+56,Research & Development,Research Scientist,5,3,4,2,3,32,29,16406
+28,Human Resources,Healthcare Representative,1,4,3,2,2,9,7,9018
+42,Sales,Sales Executive,1,2,2,4,3,17,17,8498
+39,Sales,Human Resources,4,1,4,2,4,18,16,11461
+24,Sales,Sales Executive,3,4,4,3,3,0,0,9579
+32,Human Resources,Manager,5,4,1,2,2,10,9,17078
+45,Human Resources,Manager,2,1,2,1,3,22,20,14121
+40,Sales,Laboratory Technician,4,4,4,2,2,17,14,11368
+25,Human Resources,Manager,2,2,4,0,4,1,0,13458
+47,Sales,Manufacturing Director,4,3,2,5,4,26,24,16328
+59,Sales,Research Scientist,3,2,3,1,4,39,39,14438
+53,Research & Development,Research Scientist,3,1,4,0,1,29,27,14317
+57,Human Resources,Healthcare Representative,3,1,1,1,4,37,35,12641
+58,Sales,Healthcare Representative,3,4,4,3,3,38,34,13331
+54,Sales,Research Scientist,1,2,1,5,1,36,35,12256
+57,Human Resources,Human Resources,1,2,1,5,4,39,36,8571
+24,Research & Development,Healthcare Representative,5,1,4,3,3,3,0,13142
+30,Research & Development,Laboratory Technician,2,2,4,5,3,10,6,8588
+29,Sales,Manager,4,1,1,3,3,7,4,15396
+54,Human Resources,Research Scientist,4,2,2,0,2,33,31,15649
+27,Research & Development,Research Director,1,2,2,4,1,3,0,13543
+25,Human Resources,Healthcare Representative,4,2,4,1,3,6,6,12459
+34,Human Resources,Research Scientist,1,1,3,3,2,12,11,9997
+23,Sales,Manufacturing Director,5,4,2,1,4,0,0,15281
+26,Research & Development,Sales Executive,2,2,4,0,3,3,2,8806
+48,Sales,Manager,5,1,2,4,2,24,22,18571
+53,Research & Development,Research Scientist,3,1,3,0,3,29,29,13655
+42,Research & Development,Sales Executive,3,2,4,5,1,18,14,10946
+29,Research & Development,Healthcare Representative,3,2,3,1,1,7,3,10767
+59,Research & Development,Sales Executive,5,4,4,6,4,34,33,14581
+29,Research & Development,Manager,4,1,3,4,3,10,10,16080
+24,Human Resources,Research Scientist,2,1,2,5,2,3,3,10920
+24,Sales,Manufacturing Director,3,3,2,4,4,6,6,13555
+43,Human Resources,Human Resources,3,1,3,5,3,18,15,10274
+27,Research & Development,Healthcare Representative,3,4,3,0,4,5,2,10353
+23,Sales,Research Scientist,2,3,3,3,2,0,0,10476
+44,Research & Development,Manager,3,3,4,1,4,21,21,15693
+23,Sales,Healthcare Representative,2,3,2,2,4,0,0,8319
+59,Human Resources,Laboratory Technician,3,2,4,2,4,38,34,12267
+38,Sales,Sales Executive,5,2,2,0,3,18,14,12684
+56,Sales,Human Resources,5,1,1,1,2,33,32,13047
+55,Sales,Manager,2,3,4,1,1,31,31,15710
+44,Sales,Laboratory Technician,5,4,2,0,3,25,24,13075
+51,Sales,Research Director,2,2,2,1,1,28,24,17043
+29,Research & Development,Research Scientist,5,4,4,3,1,9,5,15423
+43,Sales,Manufacturing Director,5,4,4,0,3,25,22,17465
+57,Sales,Healthcare Representative,2,2,2,3,3,32,31,11409
+26,Human Resources,Sales Executive,4,2,4,1,2,4,3,10800
+34,Sales,Healthcare Representative,5,2,3,0,2,16,16,14240
+50,Human Resources,Human Resources,3,2,4,1,4,26,26,11096
+52,Research & Development,Research Scientist,4,3,4,0,1,31,28,15691
+37,Sales,Healthcare Representative,2,3,4,1,2,12,10,10261
+51,Human Resources,Sales Executive,4,3,2,3,4,33,31,13466
+37,Human Resources,Research Scientist,1,3,3,6,2,13,11,10651
+33,Research & Development,Healthcare Representative,1,1,1,3,3,8,7,7983
+38,Sales,Manufacturing Director,5,3,1,1,2,20,19,16631
+37,Sales,Manager,5,2,3,0,1,16,12,17882
+33,Human Resources,Research Scientist,3,4,3,2,2,9,8,12832
+29,Sales,Manager,4,3,3,3,1,9,8,15698
+41,Human Resources,Research Director,1,1,2,3,3,21,20,15364
+24,Sales,Research Scientist,5,2,1,5,1,3,0,14374
+37,Human Resources,Manufacturing Director,4,4,3,2,2,14,13,15957
+51,Sales,Manager,5,4,2,1,4,30,30,18987
+44,Research & Development,Laboratory Technician,5,3,1,6,3,21,21,12575
+49,Sales,Sales Executive,1,4,4,0,2,25,21,9307
+26,Sales,Laboratory Technician,1,3,2,5,3,8,5,7396
+41,Research & Development,Healthcare Representative,5,3,1,1,3,18,18,13242
+22,Sales,Manufacturing Director,2,2,2,4,2,0,0,11701
+51,Research & Development,Laboratory Technician,5,2,1,6,2,27,24,13634
+42,Sales,Research Scientist,5,1,1,3,4,23,19,15263
+41,Human Resources,Healthcare Representative,3,2,4,4,3,19,16,11937
+27,Human Resources,Healthcare Representative,3,2,2,3,3,3,2,10373
+43,Sales,Laboratory Technician,3,3,3,3,2,20,17,10335
+39,Sales,Research Director,2,2,4,4,1,17,13,16486
+29,Sales,Laboratory Technician,2,3,4,6,2,7,3,8175
+53,Human Resources,Research Director,5,3,1,4,3,29,25,20000
+54,Sales,Manufacturing Director,3,2,3,1,2,33,33,15565
+37,Human Resources,Sales Executive,2,1,2,5,4,16,15,9009
+33,Research & Development,Laboratory Technician,1,1,3,5,1,13,13,7321
+59,Human Resources,Human Resources,5,4,3,4,2,37,35,13808
+55,Human Resources,Research Director,4,4,3,1,4,31,30,19697
+35,Research & Development,Laboratory Technician,5,2,3,5,3,16,13,13144
+57,Human Resources,Manager,4,1,3,1,2,36,32,17989
+54,Sales,Research Scientist,3,3,1,1,3,35,33,14255
+44,Sales,Human Resources,4,4,1,3,4,20,19,10991
+23,Human Resources,Human Resources,3,3,4,5,3,0,0,9256
+42,Sales,Research Director,1,4,1,5,4,24,20,14915
+23,Human Resources,Manager,4,2,4,3,4,1,1,16073
+48,Sales,Manager,5,1,4,4,4,30,29,19557
+30,Sales,Healthcare Representative,3,4,2,3,2,11,10,11135
+22,Human Resources,Research Director,5,1,3,5,3,4,2,18505
+32,Sales,Sales Executive,2,3,1,5,3,12,9,8674
+24,Human Resources,Research Scientist,3,2,2,6,1,2,2,11553
+44,Sales,Manufacturing Director,4,1,1,4,1,19,17,15715
+47,Sales,Human Resources,3,2,4,3,1,29,25,11352
+25,Research & Development,Manufacturing Director,5,1,1,0,1,6,3,16023
+39,Research & Development,Laboratory Technician,1,3,3,0,3,18,16,8040
+27,Human Resources,Laboratory Technician,3,3,4,4,4,6,6,9783
+56,Research & Development,Manufacturing Director,4,2,4,3,4,35,34,17481
+43,Human Resources,Laboratory Technician,2,3,2,3,2,20,16,9615
+36,Research & Development,Sales Executive,1,4,3,1,4,12,12,7592
+43,Sales,Manager,2,1,4,5,3,21,18,15170
+58,Human Resources,Laboratory Technician,3,3,3,2,3,37,34,12108
+33,Human Resources,Healthcare Representative,5,4,1,6,3,8,7,12653
+59,Sales,Laboratory Technician,5,2,3,4,2,38,37,14638
+39,Human Resources,Research Scientist,4,4,4,2,1,19,15,14340
+56,Human Resources,Sales Executive,5,2,2,2,4,32,28,14635
+51,Research & Development,Research Scientist,1,2,4,4,3,32,31,11997
+45,Human Resources,Research Scientist,5,1,3,3,3,21,20,15325
+51,Sales,Healthcare Representative,4,1,3,4,1,33,30,14329
+35,Research & Development,Sales Executive,3,4,4,2,3,16,15,10571
+27,Research & Development,Sales Executive,3,1,3,5,4,8,6,10059
+24,Sales,Research Director,5,1,1,6,2,6,6,18558
+37,Sales,Sales Executive,2,1,4,6,3,15,14,9887
+28,Research & Development,Sales Executive,3,4,2,5,4,10,6,10190
+35,Human Resources,Sales Executive,5,3,4,5,3,12,10,12793
+30,Research & Development,Healthcare Representative,4,1,1,3,1,11,7,11418
+36,Sales,Laboratory Technician,5,1,1,0,3,17,15,12152
+42,Research & Development,Research Director,3,4,1,4,3,24,23,17909
+56,Sales,Research Scientist,4,3,1,6,2,34,34,14881
+23,Research & Development,Sales Executive,5,1,1,5,1,2,0,11390
+48,Human Resources,Human Resources,1,2,2,4,1,28,26,8725
+23,Research & Development,Laboratory Technician,4,4,3,6,2,0,0,9803
+56,Research & Development,Laboratory Technician,1,1,1,5,3,34,33,8580
+39,Sales,Research Scientist,2,1,1,6,4,16,16,11678
+35,Sales,Healthcare Representative,4,2,4,3,1,13,12,12774
+41,Sales,Manufacturing Director,1,2,2,0,1,17,14,11513
+39,Research & Development,Manufacturing Director,3,4,2,0,3,18,18,14879
+31,Human Resources,Laboratory Technician,3,4,3,5,3,10,7,9333
+46,Sales,Manager,2,2,2,6,1,27,26,14701
+23,Sales,Manager,4,4,4,3,3,2,0,16226
+46,Research & Development,Research Scientist,4,2,4,1,4,25,24,15489
+54,Sales,Manufacturing Director,4,1,3,4,1,36,35,16892
+57,Human Resources,Laboratory Technician,2,2,4,4,4,36,35,10697
+52,Human Resources,Healthcare Representative,4,2,1,2,4,31,27,13002
+35,Sales,Manufacturing Director,3,3,1,3,3,10,7,13657
+22,Sales,Laboratory Technician,1,2,4,6,4,0,0,7123
+37,Research & Development,Laboratory Technician,3,2,3,2,3,18,15,10586
+24,Human Resources,Sales Executive,3,3,2,5,2,6,2,9297
+56,Human Resources,Healthcare Representative,1,4,3,6,3,35,33,11084
+27,Sales,Sales Executive,3,3,2,2,4,8,7,10040
+46,Research & Development,Research Scientist,2,1,4,0,2,23,21,12682
+34,Human Resources,Sales Executive,1,3,4,4,3,16,12,8913
+55,Human Resources,Human Resources,3,1,1,6,4,35,32,10811
+29,Research & Development,Sales Executive,5,4,2,2,1,8,7,12157
+42,Research & Development,Human Resources,3,3,3,0,1,23,23,10152
+55,Human Resources,Manufacturing Director,2,3,4,3,3,33,33,14383
+25,Human Resources,Manager,4,4,3,2,3,7,5,15587
+46,Research & Development,Research Director,3,1,1,5,1,28,25,18415
+36,Human Resources,Research Director,4,3,2,5,4,17,17,18217
+25,Sales,Laboratory Technician,5,1,2,5,4,4,2,11804
+33,Sales,Research Director,3,3,4,6,4,9,5,17446
+53,Research & Development,Human Resources,1,2,2,4,3,28,26,8233
+53,Research & Development,Healthcare Representative,4,3,4,2,2,31,29,14446
+49,Research & Development,Sales Executive,5,4,1,3,2,27,25,13911
+34,Sales,Human Resources,1,4,2,2,2,10,9,6911
+52,Human Resources,Healthcare Representative,1,1,4,4,2,31,29,10893
+35,Sales,Manager,1,3,3,0,2,17,15,12704
+41,Human Resources,Research Director,1,1,4,4,3,23,22,15447
+39,Sales,Manager,3,1,2,5,3,14,13,14838
+50,Human Resources,Research Director,3,2,1,6,2,28,24,17982
+27,Sales,Sales Executive,3,2,2,0,3,2,0,9689
+53,Research & Development,Research Scientist,5,4,2,6,3,31,31,16194
+50,Sales,Sales Executive,5,1,4,5,2,29,29,13996
+23,Human Resources,Manufacturing Director,5,4,3,1,4,3,1,15567
+44,Sales,Human Resources,2,3,2,4,3,22,18,9262
+40,Sales,Laboratory Technician,5,1,3,4,4,20,18,13482
+52,Sales,Research Scientist,3,1,4,3,3,30,30,14471
+26,Research & Development,Sales Executive,3,3,3,2,3,8,7,10445
+40,Sales,Healthcare Representative,2,3,4,0,2,17,14,10326
+55,Research & Development,Research Scientist,2,4,1,6,3,34,30,13189
+31,Research & Development,Human Resources,5,4,3,0,1,7,6,11997
+46,Sales,Research Director,4,3,3,3,1,26,23,19358
+23,Sales,Research Scientist,2,4,1,3,2,0,0,10088
+32,Sales,Research Director,1,3,3,6,4,11,7,14881
+52,Human Resources,Human Resources,3,1,1,2,4,33,33,11126
+36,Sales,Sales Executive,1,1,2,6,4,12,11,7549
+30,Research & Development,Human Resources,3,2,4,6,1,9,5,10115
+44,Sales,Research Scientist,3,1,1,5,4,26,22,13236
+40,Human Resources,Healthcare Representative,2,3,3,2,4,16,13,10436
+30,Sales,Manager,2,4,1,4,2,10,10,13643
+56,Human Resources,Research Scientist,1,2,3,5,4,33,31,12311
+42,Human Resources,Human Resources,3,4,2,1,1,18,18,10389
+30,Sales,Manager,1,3,1,2,1,10,8,11903
+49,Research & Development,Human Resources,4,1,2,3,1,27,26,11572
+28,Human Resources,Healthcare Representative,1,2,4,5,2,7,6,8611
+37,Sales,Human Resources,5,3,3,2,2,12,8,12346
+37,Sales,Sales Executive,1,2,3,0,3,18,17,8262
+54,Research & Development,Laboratory Technician,5,2,2,6,4,36,32,14173
+25,Human Resources,Research Director,5,1,4,1,2,0,0,18480
+25,Human Resources,Research Director,5,3,1,4,1,7,6,18758
+38,Sales,Research Scientist,4,4,1,6,1,17,17,13679
+58,Sales,Laboratory Technician,1,2,3,0,2,40,40,9382
+50,Research & Development,Human Resources,1,2,2,0,2,27,26,8062
+57,Research & Development,Healthcare Representative,4,4,2,1,2,33,33,13601
+59,Human Resources,Research Scientist,3,3,1,4,3,36,35,14463
+58,Human Resources,Human Resources,2,2,4,3,1,33,32,10039
+56,Sales,Manager,1,2,4,5,3,37,36,14699
+28,Human Resources,Manufacturing Director,2,2,1,4,3,8,6,12653
+48,Research & Development,Human Resources,4,3,1,2,4,29,29,12011
+49,Research & Development,Laboratory Technician,3,3,2,0,1,28,25,11483
+43,Sales,Research Scientist,3,4,4,2,1,22,21,13842
+35,Research & Development,Laboratory Technician,3,3,1,3,2,12,12,9354
+28,Research & Development,Research Scientist,4,3,1,2,2,8,4,13151
+58,Research & Development,Human Resources,5,1,3,4,4,35,34,14088
+43,Research & Development,Sales Executive,5,4,1,2,3,19,18,13300
+26,Sales,Manager,2,2,1,3,2,4,1,12815
+23,Sales,Human Resources,5,3,4,3,2,3,1,11788
+48,Human Resources,Research Director,5,2,2,3,1,26,24,20000
+42,Research & Development,Laboratory Technician,3,2,4,4,1,23,22,11378
+59,Human Resources,Manufacturing Director,3,1,2,3,2,35,35,16177
+36,Sales,Manufacturing Director,2,3,3,0,1,18,14,13762
+42,Sales,Healthcare Representative,1,4,1,6,4,24,20,8948
+31,Sales,Research Scientist,2,3,3,3,2,9,9,10768
+44,Sales,Laboratory Technician,2,2,2,2,1,19,18,9295
+26,Sales,Healthcare Representative,4,4,4,5,4,7,3,12448
+22,Sales,Laboratory Technician,4,3,4,2,1,0,0,10192
+34,Sales,Research Director,2,2,3,5,1,10,10,15927
+42,Research & Development,Research Scientist,2,2,2,2,1,20,17,11935
+47,Human Resources,Human Resources,2,1,3,4,2,26,25,9390
+42,Sales,Human Resources,5,1,3,2,3,19,19,12656
+39,Research & Development,Manufacturing Director,4,1,1,4,1,14,10,15522
+58,Research & Development,Human Resources,2,2,3,4,4,37,36,10598
+53,Human Resources,Human Resources,3,3,1,3,2,32,30,10593
+57,Sales,Research Director,3,1,1,0,2,33,32,18148
+38,Human Resources,Sales Executive,5,3,4,5,4,15,14,13304
+56,Sales,Manufacturing Director,5,1,1,3,1,33,31,17433
+32,Research & Development,Healthcare Representative,1,4,1,3,3,12,10,8186
+42,Research & Development,Manager,1,4,4,6,1,23,22,13564
+47,Research & Development,Sales Executive,1,1,3,4,4,22,20,9226
+25,Research & Development,Healthcare Representative,5,2,2,4,2,6,6,13269
+55,Human Resources,Research Scientist,5,1,2,5,3,31,29,16671
+39,Sales,Sales Executive,5,1,2,2,2,14,12,12230
+56,Sales,Research Director,3,2,3,2,4,36,35,18908
+50,Human Resources,Healthcare Representative,5,4,1,3,1,28,28,13951
+50,Sales,Research Scientist,3,3,2,1,3,29,26,13354
+59,Research & Development,Manufacturing Director,1,1,3,1,2,34,31,13466
+42,Sales,Manager,1,2,1,2,2,23,19,13191
+34,Research & Development,Research Scientist,1,1,4,1,2,13,11,10779
+38,Human Resources,Human Resources,2,2,2,6,1,14,12,8139
+30,Sales,Laboratory Technician,2,3,1,2,3,11,11,8220
+22,Human Resources,Research Scientist,4,3,2,4,1,0,0,12852
+23,Sales,Research Scientist,4,4,2,3,1,0,0,12734
+50,Research & Development,Manager,4,2,2,0,1,32,32,17854
+54,Human Resources,Laboratory Technician,2,2,1,3,4,32,30,9688
+31,Sales,Human Resources,2,4,3,2,4,9,6,8654
+42,Research & Development,Healthcare Representative,4,4,1,6,4,21,17,12523
+49,Human Resources,Healthcare Representative,4,2,2,2,3,25,24,12779
+32,Human Resources,Research Scientist,5,4,1,3,1,8,5,14192
+55,Sales,Research Director,4,3,4,6,1,30,26,19895
+29,Sales,Research Director,5,1,3,6,4,10,10,19189
+43,Sales,Laboratory Technician,3,3,1,6,1,25,24,10554
+29,Research & Development,Laboratory Technician,2,4,4,5,1,5,1,8742
+36,Sales,Human Resources,4,2,3,2,2,11,7,10950
+38,Human Resources,Manager,2,2,4,1,1,20,18,15288
+44,Human Resources,Manufacturing Director,2,3,3,1,2,21,18,13307
+45,Sales,Healthcare Representative,2,2,1,2,1,22,20,10561
+40,Sales,Manager,3,4,4,2,3,22,21,16568
+26,Human Resources,Sales Executive,1,3,2,5,4,3,0,7082
+53,Research & Development,Healthcare Representative,4,2,4,1,2,33,31,14637
+22,Sales,Manager,1,1,3,2,4,0,0,11658
+44,Sales,Healthcare Representative,1,1,1,2,2,24,23,9346
+58,Human Resources,Manufacturing Director,1,4,3,5,2,39,39,13732
+29,Sales,Sales Executive,2,2,4,5,2,5,3,8374
+34,Research & Development,Research Director,5,4,4,3,3,9,8,19565
+29,Human Resources,Research Director,2,3,2,5,1,9,9,15890
+44,Sales,Manufacturing Director,2,1,1,0,2,24,22,13215
+22,Human Resources,Human Resources,1,3,1,1,3,3,2,6482
+45,Sales,Sales Executive,2,2,4,3,2,25,24,9928
+56,Sales,Research Scientist,1,4,1,0,1,34,32,11825
+45,Sales,Manager,5,4,2,2,2,20,19,17515
+38,Research & Development,Sales Executive,4,4,3,2,3,15,11,11722
+26,Research & Development,Human Resources,1,3,1,3,1,1,0,6068
+41,Human Resources,Human Resources,5,1,4,5,3,19,18,13124
+42,Sales,Manufacturing Director,4,3,3,6,1,23,23,16332
+52,Sales,Healthcare Representative,3,3,3,6,1,33,33,12744
+57,Research & Development,Sales Executive,1,2,2,2,4,33,29,9879
+32,Sales,Manager,1,2,4,6,4,7,5,12695
+36,Research & Development,Sales Executive,3,2,1,4,4,18,17,10470
+40,Sales,Laboratory Technician,3,1,4,3,1,22,21,11426
+28,Human Resources,Healthcare Representative,1,1,3,0,2,9,9,8633
+49,Sales,Manager,3,2,4,3,3,29,25,17123
+26,Sales,Research Director,2,2,1,1,3,7,7,14736
+26,Research & Development,Manager,4,1,1,5,3,7,7,15288
+51,Sales,Research Scientist,4,4,2,5,4,32,28,15721
+53,Sales,Manufacturing Director,4,1,1,3,1,34,32,16516
+29,Research & Development,Research Scientist,2,1,1,2,4,11,10,10989
+31,Human Resources,Manager,3,1,4,2,2,13,11,15654
+59,Human Resources,Healthcare Representative,5,2,4,4,1,36,33,16163
+53,Research & Development,Sales Executive,3,4,3,4,3,30,27,12265
+49,Research & Development,Research Director,1,1,2,5,4,25,22,15672
+38,Research & Development,Sales Executive,4,2,4,4,4,19,15,12357
+52,Research & Development,Healthcare Representative,3,3,1,0,2,34,34,12602
+29,Research & Development,Manager,5,3,3,4,2,4,2,17034
+46,Human Resources,Human Resources,1,1,4,0,4,24,23,8898
+30,Human Resources,Sales Executive,2,3,2,4,2,6,3,8305
+23,Research & Development,Human Resources,2,4,2,5,3,5,3,7562
+36,Sales,Sales Executive,5,3,3,5,2,11,8,12848
+24,Research & Development,Sales Executive,1,3,3,0,2,5,2,7774
+57,Sales,Research Director,4,4,3,3,4,36,35,20000
+25,Research & Development,Manufacturing Director,3,1,3,5,4,6,2,13885
+35,Research & Development,Manufacturing Director,1,1,3,3,1,12,12,12046
+46,Human Resources,Laboratory Technician,2,4,1,2,1,24,20,9143
+31,Sales,Research Scientist,5,4,1,0,4,13,11,14937
+42,Sales,Healthcare Representative,5,4,4,6,2,24,20,14545
+57,Human Resources,Healthcare Representative,3,3,2,5,2,37,35,13084
+33,Human Resources,Healthcare Representative,5,4,1,1,1,11,9,13404
+48,Human Resources,Laboratory Technician,5,2,1,2,1,28,28,12904
+23,Human Resources,Manufacturing Director,1,3,1,3,1,1,0,10552
+34,Sales,Manager,4,1,4,5,3,11,11,16583
+53,Sales,Human Resources,3,1,3,0,3,33,29,11637
+52,Research & Development,Research Director,1,1,4,6,1,27,25,16114
+37,Research & Development,Human Resources,4,3,2,4,2,17,14,11528
+53,Human Resources,Manager,1,2,2,6,1,29,26,13572
+53,Human Resources,Research Director,1,4,2,1,3,28,26,16076
+55,Human Resources,Laboratory Technician,5,4,2,3,2,31,31,13306
+32,Research & Development,Manager,4,1,1,2,3,13,12,15732
+31,Research & Development,Healthcare Representative,3,1,1,6,2,9,9,10646
+36,Research & Development,Research Scientist,3,3,4,0,3,11,9,13053
+38,Research & Development,Sales Executive,4,2,3,1,2,16,14,11909
+39,Research & Development,Human Resources,5,4,2,0,2,20,19,12009
+30,Research & Development,Manufacturing Director,2,3,4,5,2,9,5,12511
+46,Research & Development,Manufacturing Director,1,4,1,4,2,28,24,12278
+35,Human Resources,Laboratory Technician,5,1,1,2,4,13,12,12020
+46,Human Resources,Research Director,4,4,3,0,3,27,23,19508
+43,Human Resources,Manufacturing Director,1,2,3,3,3,21,18,12312
+51,Human Resources,Healthcare Representative,3,2,3,5,4,32,28,13128
+41,Research & Development,Human Resources,2,1,4,5,2,17,13,8899
+42,Sales,Manager,3,2,1,2,2,23,19,16100
+53,Research & Development,Healthcare Representative,4,2,1,5,3,33,30,13191
+42,Sales,Laboratory Technician,1,3,3,3,4,21,17,8486
+56,Human Resources,Healthcare Representative,4,4,2,0,2,34,31,13885
+53,Research & Development,Manager,1,1,3,2,2,34,33,14737
+51,Human Resources,Research Scientist,5,1,4,5,2,32,32,17158
+33,Research & Development,Laboratory Technician,2,1,3,5,1,11,10,8654
+39,Human Resources,Research Scientist,5,1,3,3,4,21,21,15680
+42,Sales,Sales Executive,5,1,4,4,2,21,20,13618
+34,Sales,Research Scientist,4,2,3,4,1,13,13,14317
+42,Sales,Sales Executive,2,3,1,6,4,23,23,9744
+29,Research & Development,Sales Executive,1,1,2,5,2,4,2,7551
+28,Sales,Research Scientist,1,3,3,0,3,4,4,10116
+44,Research & Development,Laboratory Technician,3,3,4,2,1,23,23,11461
+53,Sales,Research Director,1,2,2,5,1,32,30,16480
+32,Sales,Manager,4,1,4,1,2,9,5,16476
+43,Research & Development,Healthcare Representative,5,2,2,2,2,23,19,14337
+43,Research & Development,Healthcare Representative,5,1,2,6,1,22,20,14168
+46,Sales,Manager,5,2,3,4,3,22,19,18012
+43,Research & Development,Human Resources,2,3,1,5,3,23,23,8953
+49,Sales,Human Resources,1,1,3,3,4,29,29,8622
+50,Research & Development,Sales Executive,4,4,4,1,2,28,26,13393
+34,Human Resources,Sales Executive,2,3,4,5,3,12,10,9760
+39,Human Resources,Laboratory Technician,3,4,2,6,4,17,14,10431
+23,Human Resources,Manufacturing Director,4,3,2,0,3,1,0,14455
+50,Human Resources,Research Scientist,4,2,1,1,2,27,26,14165
+42,Human Resources,Sales Executive,4,1,3,6,4,21,17,12279
+36,Sales,Healthcare Representative,5,3,4,5,4,14,14,14080
+48,Human Resources,Laboratory Technician,4,2,2,0,4,29,27,12536
+52,Human Resources,Research Scientist,1,1,1,1,3,27,24,10677
+36,Human Resources,Laboratory Technician,4,1,4,0,2,14,10,11504
+44,Human Resources,Research Scientist,5,3,2,0,4,23,20,15840
+45,Research & Development,Research Scientist,4,1,4,1,1,23,19,15105
+34,Sales,Manager,3,3,1,1,2,11,11,15130
+43,Human Resources,Sales Executive,3,1,1,0,1,19,18,10698
+58,Human Resources,Research Director,5,4,4,6,1,34,31,20000
+54,Human Resources,Laboratory Technician,1,2,3,4,4,33,30,8900
+24,Sales,Research Director,1,4,4,1,4,5,4,14169
+40,Research & Development,Laboratory Technician,2,3,2,5,3,16,13,8435
+44,Sales,Manager,5,4,3,2,3,26,23,18407
+50,Research & Development,Healthcare Representative,4,3,2,3,3,26,22,13628
+51,Human Resources,Research Director,5,1,4,0,2,26,22,20000
+46,Human Resources,Healthcare Representative,2,1,3,0,3,25,24,10545
+58,Sales,Human Resources,5,3,2,3,1,39,39,13663
+29,Sales,Sales Executive,5,4,4,4,3,8,5,12889
+37,Research & Development,Sales Executive,2,1,4,3,4,13,13,9723
+29,Research & Development,Manufacturing Director,1,2,3,1,3,5,4,11331
+22,Sales,Manager,4,1,4,3,2,0,0,15439
+26,Research & Development,Healthcare Representative,2,2,1,0,2,6,2,8992
+24,Sales,Research Scientist,3,4,2,3,1,1,0,11811
+22,Research & Development,Laboratory Technician,1,2,2,2,2,0,0,6419
+25,Sales,Sales Executive,3,2,4,5,3,7,6,10003
+56,Sales,Research Director,1,2,4,1,4,33,30,16526
+53,Sales,Laboratory Technician,4,2,1,3,2,32,32,12332
+55,Research & Development,Laboratory Technician,4,1,3,0,1,37,33,12934
+46,Research & Development,Manufacturing Director,5,2,4,6,3,21,21,17332
+31,Research & Development,Healthcare Representative,3,1,4,5,1,9,8,10685
+42,Sales,Sales Executive,1,2,4,1,2,17,16,8138
+48,Research & Development,Laboratory Technician,4,3,4,0,2,29,29,12817
+48,Research & Development,Sales Executive,2,4,2,4,1,28,27,10375
+23,Sales,Research Scientist,4,2,4,2,3,2,0,12961
+34,Human Resources,Manufacturing Director,2,3,2,4,2,14,13,13397
+30,Sales,Research Scientist,1,2,4,2,4,9,5,10381
+57,Research & Development,Sales Executive,4,2,3,3,2,32,29,13217
+43,Sales,Human Resources,4,2,1,1,3,18,16,10552
+47,Human Resources,Research Director,1,3,3,3,2,22,21,15150
+33,Sales,Sales Executive,4,4,4,2,1,12,11,11400
+38,Research & Development,Healthcare Representative,2,3,4,2,2,14,10,10108
+35,Human Resources,Laboratory Technician,4,4,4,2,2,10,6,11600
+35,Research & Development,Laboratory Technician,3,2,3,5,3,15,15,10429
+55,Human Resources,Research Scientist,5,1,4,0,1,36,36,17268
+41,Human Resources,Research Director,2,2,3,1,3,19,19,16430
+32,Sales,Manufacturing Director,3,4,2,3,2,11,7,13756
+37,Sales,Human Resources,1,3,1,3,4,19,19,7303
+52,Research & Development,Manager,2,2,1,4,2,32,32,15505
+27,Sales,Research Director,5,3,3,2,3,4,2,18571
+40,Sales,Laboratory Technician,5,3,2,6,4,21,21,13214
+58,Human Resources,Healthcare Representative,1,3,3,2,3,35,34,10850
+25,Sales,Research Director,1,2,2,2,3,3,0,13966
+25,Human Resources,Research Scientist,2,3,4,6,1,1,0,10598
+41,Human Resources,Research Scientist,4,3,2,3,4,16,14,13848
+31,Human Resources,Manager,1,2,2,4,2,10,6,12505
+45,Research & Development,Healthcare Representative,4,3,2,0,3,25,21,13694
+56,Research & Development,Manufacturing Director,3,2,1,6,2,38,37,15899
+47,Research & Development,Research Director,5,4,2,5,1,22,22,20000
+58,Human Resources,Healthcare Representative,4,4,4,1,1,38,37,14601
+59,Research & Development,Manufacturing Director,5,4,4,6,4,38,38,18351
+42,Research & Development,Healthcare Representative,4,3,4,0,1,19,19,12775
+42,Sales,Healthcare Representative,3,1,2,3,1,17,13,11543
+31,Research & Development,Sales Executive,1,1,3,5,2,9,9,7696
+59,Research & Development,Research Scientist,3,3,3,5,1,35,33,14938
+25,Human Resources,Research Director,1,1,4,5,1,3,1,14140
+41,Human Resources,Healthcare Representative,1,2,1,2,3,17,15,9067
+38,Human Resources,Research Director,5,1,3,1,1,19,15,19796
+28,Human Resources,Manager,3,3,2,3,3,8,7,14480
+25,Human Resources,Healthcare Representative,4,3,3,3,1,0,0,10956
+50,Human Resources,Laboratory Technician,3,2,4,5,1,25,25,11554
+35,Research & Development,Research Scientist,5,4,1,3,4,16,13,15331
+24,Human Resources,Laboratory Technician,1,3,3,1,4,0,0,6547
+45,Human Resources,Research Director,5,2,3,1,3,22,21,20000
+58,Sales,Research Director,2,1,4,4,1,37,33,18356
+37,Research & Development,Research Scientist,2,1,1,6,2,15,13,11432
+25,Research & Development,Research Director,4,2,1,6,4,6,4,17717
+45,Research & Development,Laboratory Technician,5,2,4,4,2,27,26,13461
+55,Human Resources,Healthcare Representative,4,3,2,0,4,37,33,13989
+51,Human Resources,Healthcare Representative,4,1,3,6,4,31,27,13742
+39,Human Resources,Sales Executive,2,2,2,1,1,20,20,9991
+40,Sales,Manager,4,1,3,1,4,18,16,16793
+52,Human Resources,Research Director,2,2,3,6,2,30,29,17255
+40,Sales,Laboratory Technician,1,1,2,1,4,20,17,7715
+40,Research & Development,Research Director,5,4,4,4,3,20,18,20000
+43,Human Resources,Research Director,4,3,4,5,1,18,18,19094
+45,Sales,Manufacturing Director,2,1,3,5,1,23,19,14226
+33,Sales,Sales Executive,3,4,4,3,3,12,11,10082
+51,Human Resources,Laboratory Technician,4,1,3,5,3,33,31,12494
+59,Research & Development,Laboratory Technician,1,1,4,2,3,38,35,9525
+52,Research & Development,Research Director,1,4,3,4,4,28,28,15788
+57,Research & Development,Sales Executive,3,1,4,1,1,38,38,12888
+40,Sales,Healthcare Representative,2,1,1,6,3,20,18,10504
+57,Sales,Laboratory Technician,4,3,2,5,4,32,29,12193
+51,Sales,Healthcare Representative,2,4,1,4,3,30,30,10820
+54,Sales,Sales Executive,1,4,2,5,2,31,30,9169
+39,Research & Development,Healthcare Representative,2,2,2,0,2,21,21,10413
+49,Human Resources,Research Scientist,1,1,3,1,1,24,21,10741
+32,Sales,Manufacturing Director,2,3,2,0,4,7,3,12732
+54,Sales,Human Resources,3,1,1,1,2,33,29,11039
+38,Research & Development,Laboratory Technician,5,1,1,4,2,15,13,12364
+27,Human Resources,Manager,3,2,4,3,4,3,0,14264
+25,Human Resources,Manufacturing Director,3,1,1,5,3,4,4,12698
+41,Research & Development,Human Resources,5,3,4,5,4,18,18,13097
+48,Research & Development,Healthcare Representative,5,3,2,2,3,23,19,14707
+36,Human Resources,Laboratory Technician,4,2,1,6,2,18,14,10790
+27,Sales,Healthcare Representative,4,1,2,0,2,4,3,11747
+35,Human Resources,Research Scientist,3,3,1,5,2,10,6,11775
+32,Research & Development,Sales Executive,3,1,1,4,1,13,12,10409
+30,Sales,Laboratory Technician,1,1,4,3,1,9,9,7272
+47,Sales,Human Resources,1,1,2,6,1,27,26,8725
+37,Research & Development,Human Resources,4,2,1,4,4,16,15,10525
+26,Research & Development,Research Scientist,4,1,3,0,2,7,5,13698
+31,Research & Development,Research Scientist,1,3,2,2,2,9,5,9425
+24,Human Resources,Research Director,1,1,2,5,4,2,1,13452
+34,Human Resources,Laboratory Technician,2,3,2,4,1,12,12,8375
+51,Sales,Healthcare Representative,2,1,4,6,4,30,27,11401
+27,Research & Development,Manager,1,3,3,1,1,3,2,12087
+38,Sales,Human Resources,2,3,2,3,2,17,13,9113
+40,Sales,Human Resources,5,1,1,6,3,22,20,12675
+56,Sales,Research Scientist,4,1,1,4,1,37,37,15893
+47,Sales,Manufacturing Director,4,3,4,3,2,29,27,17198
+26,Research & Development,Research Scientist,1,4,1,5,2,7,4,9227
+50,Sales,Manager,3,2,2,1,3,30,29,16069
+58,Research & Development,Healthcare Representative,1,4,1,2,2,35,34,10250
+41,Research & Development,Healthcare Representative,2,4,2,6,2,20,16,10354
+42,Human Resources,Manufacturing Director,3,1,1,2,1,21,20,14630
+31,Research & Development,Human Resources,2,2,3,1,1,6,6,7771
+26,Human Resources,Research Scientist,5,4,4,3,3,7,4,14923
+57,Research & Development,Research Director,2,1,4,5,3,32,30,18058
+27,Research & Development,Healthcare Representative,5,4,3,4,2,2,0,13060
+47,Research & Development,Manager,5,4,3,1,1,26,25,18320
+25,Human Resources,Laboratory Technician,2,1,4,0,3,1,0,7725
+56,Human Resources,Sales Executive,2,1,3,3,3,33,29,10764
+22,Sales,Sales Executive,5,1,2,2,4,0,0,11413
