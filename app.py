@@ -6,8 +6,12 @@ import os
 import io
 import matplotlib.pyplot as plt
 import seaborn as sns
+import plotly.express as px
 from sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import RandomForestRegressor
+import sqlite3
+import tempfile
+import json
 
 st.set_page_config(
     page_title="Employee Skill Upgrade Recommendation System",
@@ -62,6 +66,61 @@ def generate_data():
         'YearsAtCompany': yc_col, 'MonthlyIncome': income
     })
 
+# ── Helper: parse uploaded files ──────────────────────────────────────────────
+def parse_uploaded_file(file_obj):
+    ext = file_obj.name.split('.')[-1].lower()
+    raw_bytes = file_obj.read()
+    if ext == 'csv':
+        return pd.read_csv(io.BytesIO(raw_bytes))
+    elif ext == 'xlsx':
+        return pd.read_excel(io.BytesIO(raw_bytes))
+    elif ext == 'json':
+        return pd.read_json(io.BytesIO(raw_bytes))
+    elif ext in ['sqlite', 'db', 'sql']:
+        with tempfile.NamedTemporaryFile(delete=False, suffix='.sqlite') as tmp:
+            tmp.write(raw_bytes)
+            tmp_path = tmp.name
+        conn = sqlite3.connect(tmp_path)
+        query = "SELECT name FROM sqlite_master WHERE type='table';"
+        tables = pd.read_sql(query, conn)
+        if not tables.empty:
+            first_table = tables['name'].iloc[0]
+            df = pd.read_sql(f"SELECT * FROM {first_table}", conn)
+        else:
+            conn.close()
+            os.remove(tmp_path)
+            raise ValueError("No tables found in the SQLite database")
+        conn.close()
+        os.remove(tmp_path)
+        return df
+    else:
+        raise ValueError("Unsupported file format")
+
+def build_download_templates(sample_df):
+    c1, c2, c3, c4 = st.columns(4)
+    with c1:
+        csv_bytes = sample_df.to_csv(index=False).encode('utf-8')
+        st.download_button("CSV Template", csv_bytes, "template.csv", "text/csv", use_container_width=True)
+    with c2:
+        output = io.BytesIO()
+        with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
+            sample_df.to_excel(writer, index=False)
+        xlsx_data = output.getvalue()
+        st.download_button("Excel Template", xlsx_data, "template.xlsx", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", use_container_width=True)
+    with c3:
+        json_bytes = sample_df.to_json(orient="records").encode('utf-8')
+        st.download_button("JSON Template", json_bytes, "template.json", "application/json", use_container_width=True)
+    with c4:
+        with tempfile.NamedTemporaryFile(delete=False, suffix='.sqlite') as tmp:
+            tmp_path = tmp.name
+        conn = sqlite3.connect(tmp_path)
+        sample_df.to_sql("employees", conn, index=False, if_exists="replace")
+        conn.close()
+        with open(tmp_path, "rb") as f:
+            sql_bytes = f.read()
+        os.remove(tmp_path)
+        st.download_button("SQLite Template", sql_bytes, "template.sqlite", "application/x-sqlite3", use_container_width=True)
+
 # ── Load / generate default data ─────────────────────────────────────────────
 @st.cache_data
 def load_default_data():
@@ -111,14 +170,46 @@ def build_encoders_and_model(df_raw, force_retrain=False):
 
 # ── Skill map ─────────────────────────────────────────────────────────────────
 role_skills = {
-    'Sales Executive':           ['Communication', 'Negotiation', 'CRM'],
-    'Research Scientist':        ['Python', 'Machine Learning', 'Statistics'],
-    'Laboratory Technician':     ['Lab Skills', 'Data Analysis'],
-    'Manufacturing Director':    ['Operations', 'Planning', 'Leadership'],
-    'Healthcare Representative': ['Medical Knowledge', 'Communication'],
-    'Manager':                   ['Leadership', 'Strategy', 'People Management'],
-    'Human Resources':           ['Recruitment', 'HR Management', 'Communication'],
-    'Research Director':         ['Advanced ML', 'Deep Learning', 'Leadership'],
+    'Sales Executive': [
+        {"skill": "Advanced Negotiation", "reason": "Close high-value deals", "level": "Advanced", "course": "Negotiation Mastery", "provider": "Coursera", "duration": "4 weeks", "duration_weeks": 4, "impact": "High 💰", "cost": "$49", "cost_usd": 49, "prereq": "Basic Sales Strategy"},
+        {"skill": "Salesforce/CRM", "reason": "Improve pipeline management", "level": "Intermediate", "course": "Salesforce Admin", "provider": "Trailhead", "duration": "2 weeks", "duration_weeks": 2, "impact": "Medium 🚀", "cost": "Free", "cost_usd": 0, "prereq": "None"},
+        {"skill": "Public Speaking", "reason": "Boost confidence in pitches", "level": "Beginner", "course": "Dynamic Public Speaking", "provider": "Udemy", "duration": "3 weeks", "duration_weeks": 3, "impact": "Medium 🗣️", "cost": "$15", "cost_usd": 15, "prereq": "None"}
+    ],
+    'Research Scientist': [
+        {"skill": "Deep Learning", "reason": "AI research focus", "level": "Advanced", "course": "Deep Learning Specialization", "provider": "Coursera", "duration": "12 weeks", "duration_weeks": 12, "impact": "High 💰", "cost": "$49/mo", "cost_usd": 147, "prereq": "Python, Math"},
+        {"skill": "Statistical Modeling", "reason": "Experimental design", "level": "Intermediate", "course": "Bayesian Statistics", "provider": "edX", "duration": "6 weeks", "duration_weeks": 6, "impact": "High 📈", "cost": "$99", "cost_usd": 99, "prereq": "Basic Stats"},
+        {"skill": "Cloud Computing", "reason": "Scale experiments", "level": "Beginner", "course": "AWS Cloud Practitioner", "provider": "AWS", "duration": "2 weeks", "duration_weeks": 2, "impact": "Medium ☁️", "cost": "Free", "cost_usd": 0, "prereq": "None"}
+    ],
+    'Laboratory Technician': [
+        {"skill": "Equipment Handling", "reason": "Lab safety/efficiency", "level": "Intermediate", "course": "Advanced Lab Techniques", "provider": "edX", "duration": "4 weeks", "duration_weeks": 4, "impact": "Medium 🔬", "cost": "$50", "cost_usd": 50, "prereq": "Safety Protocols"},
+        {"skill": "Data Analysis (R/Python)", "reason": "Doc and Analysis", "level": "Intermediate", "course": "Data Analysis with Python", "provider": "DataCamp", "duration": "6 weeks", "duration_weeks": 6, "impact": "High 📊", "cost": "$25/mo", "cost_usd": 38, "prereq": "None"},
+        {"skill": "Quality Control (GLP)", "reason": "Regulatory compliance", "level": "Beginner", "course": "Good Laboratory Practice", "provider": "Udemy", "duration": "1 week", "duration_weeks": 1, "impact": "Low 📋", "cost": "$15", "cost_usd": 15, "prereq": "None"}
+    ],
+    'Manufacturing Director': [
+        {"skill": "Lean Six Sigma", "reason": "Process optimization", "level": "Advanced", "course": "Six Sigma Green Belt", "provider": "Coursera", "duration": "8 weeks", "duration_weeks": 8, "impact": "High 💰", "cost": "$79", "cost_usd": 79, "prereq": "Management Exp."},
+        {"skill": "Supply Chain Mgmt", "reason": "Reduce delays/costs", "level": "Intermediate", "course": "Supply Chain Excellence", "provider": "edX", "duration": "5 weeks", "duration_weeks": 5, "impact": "High 📦", "cost": "$150", "cost_usd": 150, "prereq": "Basic Operations"},
+        {"skill": "Strategic Leadership", "reason": "Plant operations", "level": "Advanced", "course": "Executive Leadership", "provider": "Harvard Online", "duration": "6 weeks", "duration_weeks": 6, "impact": "Very High 👑", "cost": "$2000", "cost_usd": 2000, "prereq": "5+ yrs Leadership"}
+    ],
+    'Healthcare Representative': [
+        {"skill": "Medical Device Knowledge", "reason": "Accurate pitching", "level": "Intermediate", "course": "MedTech Sales", "provider": "Udemy", "duration": "3 weeks", "duration_weeks": 3, "impact": "High 🩺", "cost": "$20", "cost_usd": 20, "prereq": "Life Sciences Degree"},
+        {"skill": "Healthcare Compliance", "reason": "Ethical sales", "level": "Beginner", "course": "HIPAA & Compliance", "provider": "CTG", "duration": "1 week", "duration_weeks": 1, "impact": "Medium ⚖️", "cost": "$40", "cost_usd": 40, "prereq": "None"},
+        {"skill": "Relationship Mgmt", "reason": "Build trust", "level": "Intermediate", "course": "B2B Relationship Sales", "provider": "LinkedIn", "duration": "2 weeks", "duration_weeks": 2, "impact": "Medium 🤝", "cost": "$30/mo", "cost_usd": 30, "prereq": "Basic Sales"}
+    ],
+    'Manager': [
+        {"skill": "Agile Project Mgmt", "reason": "Accelerate delivery", "level": "Intermediate", "course": "Agile Crash Course", "provider": "Udemy", "duration": "2 weeks", "duration_weeks": 2, "impact": "High 🚀", "cost": "$15", "cost_usd": 15, "prereq": "None"},
+        {"skill": "Conflict Resolution", "reason": "Team harmony", "level": "Intermediate", "course": "Managing Team Conflict", "provider": "Coursera", "duration": "3 weeks", "duration_weeks": 3, "impact": "Medium 🕊️", "cost": "$49", "cost_usd": 49, "prereq": "None"},
+        {"skill": "Financial Acumen", "reason": "Budget planning", "level": "Advanced", "course": "Finance for Managers", "provider": "Coursera", "duration": "4 weeks", "duration_weeks": 4, "impact": "High 💰", "cost": "$49", "cost_usd": 49, "prereq": "Basic Accounting"}
+    ],
+    'Human Resources': [
+        {"skill": "Talent Analytics", "reason": "Improve hiring quality", "level": "Intermediate", "course": "People Analytics", "provider": "Wharton Online", "duration": "5 weeks", "duration_weeks": 5, "impact": "High 📈", "cost": "$199", "cost_usd": 199, "prereq": "HR Principles"},
+        {"skill": "Employer Branding", "reason": "Attract candidates", "level": "Intermediate", "course": "Brand Strategy", "provider": "LinkedIn", "duration": "2 weeks", "duration_weeks": 2, "impact": "Medium ✨", "cost": "$30", "cost_usd": 30, "prereq": "None"},
+        {"skill": "D&I Strategies", "reason": "Healthier workplace", "level": "Beginner", "course": "Diversity & Inclusion", "provider": "Coursera", "duration": "4 weeks", "duration_weeks": 4, "impact": "Medium 🌍", "cost": "$49", "cost_usd": 49, "prereq": "None"}
+    ],
+    'Research Director': [
+        {"skill": "Grants Writing", "reason": "Secure budgeting", "level": "Advanced", "course": "Grant Writing 101", "provider": "edX", "duration": "4 weeks", "duration_weeks": 4, "impact": "Very High 💰", "cost": "$149", "cost_usd": 149, "prereq": "Research Exp."},
+        {"skill": "R&D Strategy", "reason": "Align with business", "level": "Advanced", "course": "Innovation Strategy", "provider": "MIT OpenCourseWare", "duration": "6 weeks", "duration_weeks": 6, "impact": "High 🧠", "cost": "Free", "cost_usd": 0, "prereq": "PhD/Leadership"},
+        {"skill": "Executive Comms", "reason": "Board presentations", "level": "Intermediate", "course": "Communicating for Impact", "provider": "LinkedIn", "duration": "2 weeks", "duration_weeks": 2, "impact": "Medium 🎙️", "cost": "$30", "cost_usd": 30, "prereq": "None"}
+    ]
 }
 
 # ════════════════════════════════════════════════════════════════════════════
@@ -135,9 +226,9 @@ st.sidebar.markdown("### 📂 Data Source")
 
 # ── Upload widget in sidebar ──────────────────────────────────────────────────
 uploaded_file = st.sidebar.file_uploader(
-    "Upload your CSV file",
-    type=["csv"],
-    help="CSV must contain: " + ", ".join(REQUIRED_COLS)
+    "Upload your dataset",
+    type=["csv", "xlsx", "json", "sqlite", "db"],
+    help="Dataset must contain: " + ", ".join(REQUIRED_COLS) + ". Supported: CSV, Excel, JSON, SQLite."
 )
 
 # ── Session state for uploaded data ──────────────────────────────────────────
@@ -153,8 +244,7 @@ if uploaded_file is not None:
     if uploaded_file.name != st.session_state.upload_name:
         # New file uploaded — parse & validate
         try:
-            raw_bytes = uploaded_file.read()
-            df_up = pd.read_csv(io.BytesIO(raw_bytes))
+            df_up = parse_uploaded_file(uploaded_file)
             df_up.dropna(inplace=True)
             df_up.drop_duplicates(inplace=True)
             missing_cols = validate_dataframe(df_up)
@@ -204,36 +294,95 @@ else:
     df_enc, le_dict, model = build_encoders_and_model(df_raw)
 
 # ════════════════════════════════════════════════════════════════════════════
-# PAGE 1 – Dashboard
+# PAGE 1 – Dashboard & Skill Gap Analysis
 # ════════════════════════════════════════════════════════════════════════════
 if page == "📊 Dashboard":
-    st.title("📊 Employee Skill Upgrade Recommendation System")
-    st.markdown("### Dashboard – Overview of Employee Data")
+    st.title("📊 Enterprise Skill & Performance Dashboard")
+    st.markdown("Monitor company-wide employee data, analyze skill gaps, and track learning progress.")
 
-    col1, col2, col3 = st.columns(3)
-    col1.metric("👥 Total Employees", f"{len(df_raw):,}")
-    col2.metric("💵 Avg Monthly Income", f"₹{int(df_raw['MonthlyIncome'].mean()):,}")
-    col3.metric("📈 Avg Performance", f"{df_raw['PerformanceRating'].mean():.2f}")
+    tab_overview, tab_gap, tab_progress = st.tabs([
+        "🏢 Company Overview", "🔍 Skill Gap Analysis", "📈 Training Progress"
+    ])
 
-    st.markdown("---")
-    col_a, col_b = st.columns(2)
+    with tab_overview:
+        st.markdown("### Overview of Employee Data")
+        col1, col2, col3, col4 = st.columns(4)
+        col1.metric("👥 Total Employees", f"{len(df_raw):,}")
+        col2.metric("💵 Avg Monthly Income", f"₹{int(df_raw['MonthlyIncome'].mean()):,}")
+        col3.metric("📈 Avg Performance", f"{df_raw['PerformanceRating'].mean():.2f}")
+        col4.metric("⚖️ Avg Work-Life", f"{df_raw['WorkLifeBalance'].mean():.2f}")
 
-    with col_a:
-        fig, ax = plt.subplots(figsize=(6, 4))
-        sns.histplot(df_raw['MonthlyIncome'], kde=True, ax=ax, color='steelblue')
-        ax.set_title("Monthly Income Distribution")
-        ax.set_xlabel("Monthly Income (₹)")
-        st.pyplot(fig)
-        plt.close(fig)
+        st.markdown("---")
+        col_a, col_b = st.columns(2)
 
-    with col_b:
-        fig2, ax2 = plt.subplots(figsize=(6, 4))
-        dept_avg = df_raw.groupby('Department')['MonthlyIncome'].mean().sort_values().reset_index()
-        sns.barplot(x='MonthlyIncome', y='Department', hue='Department', data=dept_avg, ax=ax2, palette='viridis', legend=False)
-        ax2.set_title("Avg Income by Department")
-        ax2.set_xlabel("Avg Monthly Income (₹)")
-        st.pyplot(fig2)
-        plt.close(fig2)
+        with col_a:
+            fig1 = px.histogram(df_raw, x="MonthlyIncome", nbins=30, title="Monthly Income Distribution", color_discrete_sequence=['steelblue'])
+            st.plotly_chart(fig1, use_container_width=True)
+
+        with col_b:
+            dept_avg = df_raw.groupby('Department')['MonthlyIncome'].mean().sort_values().reset_index()
+            fig2 = px.bar(dept_avg, x="MonthlyIncome", y="Department", orientation='h', title="Avg Income by Department", color="Department")
+            st.plotly_chart(fig2, use_container_width=True)
+
+    with tab_gap:
+        st.markdown("### 🔍 Skill Gap Risk Analysis")
+        st.info("A 'Skill Gap' is flagged when an employee's performance rating falls short of the target 4.0 standard.")
+        
+        df_gap = df_raw.copy()
+        df_gap['TargetPerformance'] = 4.0
+        df_gap['SkillGap'] = df_gap['TargetPerformance'] - df_gap['PerformanceRating']
+        df_gap['SkillGap'] = df_gap['SkillGap'].clip(lower=0)
+        
+        gap_by_role = df_gap.groupby('JobRole')['SkillGap'].mean().sort_values(ascending=False).reset_index()
+        
+        c1, c2 = st.columns(2)
+        with c1:
+            fig3 = px.bar(gap_by_role, x='SkillGap', y='JobRole', orientation='h', title="Average Skill Gap by Job Role", color="SkillGap", color_continuous_scale="Reds")
+            st.plotly_chart(fig3, use_container_width=True)
+            
+        with c2:
+            # Scatter to find at-risk employees (High exp, low perf)
+            fig4 = px.scatter(df_gap, x='YearsAtCompany', y='PerformanceRating', color='SkillGap', size='SkillGap', title="Tenure vs Performance", color_continuous_scale="RdBu_r")
+            st.plotly_chart(fig4, use_container_width=True)
+            
+        high_risk_count = len(df_gap[(df_gap['SkillGap'] >= 1.5) & (df_gap['YearsAtCompany'] > 3)])
+        st.warning(f"🚨 **Action Required:** We found **{high_risk_count}** tenured employees (>3 yrs) with a significant skill gap. Consider allocating bootcamp budgets to upskill them immediately.")
+
+    with tab_progress:
+        st.markdown("### 📈 Corporate Up-skilling Tracker")
+        st.write("Track the adoption of learning initiatives across the enterprise.")
+        
+        # Simulate active enrollments based on TrainingTimesLastYear
+        active_learners = len(df_raw[df_raw['TrainingTimesLastYear'] >= 2])
+        total_emp = len(df_raw)
+        adoption_rate = active_learners / total_emp
+        
+        c1, c2, c3 = st.columns(3)
+        c1.metric("📚 Active Learners", f"{active_learners:,}")
+        c2.metric("🎯 Company Learning Goal", "80% Enrolled")
+        c3.metric("📊 Current Adoption", f"{int(adoption_rate*100)}%")
+        
+        st.markdown("#### Progress towards Annual Up-skill Goal")
+        st.progress(min(adoption_rate / 0.80, 1.0))
+        
+        st.markdown("---")
+        st.markdown("#### 🏆 Top Enrolled Courses (Simulated from Active Rules)")
+        
+        course_counts = {}
+        for role, count in df_raw['JobRole'].value_counts().items():
+            if role in role_skills and len(role_skills[role]) > 0:
+                top_course = role_skills[role][0]['course']
+                course_counts[top_course] = course_counts.get(top_course, 0) + int(count * 0.4)
+                
+        course_df = pd.DataFrame(list(course_counts.items()), columns=["Course", "Enrollees"]).sort_values(by="Enrollees", ascending=False).head(5)
+        
+        c_a, c_b = st.columns([1.5, 1])
+        with c_a:
+            st.dataframe(course_df, use_container_width=True, hide_index=True)
+        with c_b:
+            fig5 = px.pie(course_df, names='Course', values='Enrollees', hole=0.3)
+            fig5.update_layout(showlegend=False)
+            st.plotly_chart(fig5, use_container_width=True)
 
 # ════════════════════════════════════════════════════════════════════════════
 # PAGE 2 – Salary Prediction
@@ -279,28 +428,108 @@ elif page == "🎯 Skill Recommendation":
     st.title("🎯 Skill Upgrade Recommendations")
     st.markdown("Get personalised skill recommendations based on role and performance.")
 
-    col1, col2, col3 = st.columns(3)
+    col1, col2 = st.columns(2)
     with col1:
+        st.markdown("##### 👩‍💼 Employee Details")
         role = st.selectbox("Job Role", list(role_skills.keys()))
-    with col2:
         perf = st.slider("Performance Rating (1–4)", 1, 4, 3)
-    with col3:
-        train = st.slider("Training Times Last Year", 0, 10, 2)
+    with col2:
+        st.markdown("##### 🎛️ Course Preferences")
+        max_duration = st.slider("⏳ Max Course Duration (Weeks)", 1, 16, 12)
+        max_budget = st.slider("🎯 Max Budget per Course ($)", 0, 500, 200, step=25)
 
-    if st.button("🎯 Get Recommendations", use_container_width=True):
-        skills = list(role_skills.get(role, ["General Skills"]))
+    if "recommendation_active" not in st.session_state:
+        st.session_state.recommendation_active = False
+        st.session_state.recommendation_role = None
+        st.session_state.recommendation_perf = None
+        st.session_state.rec_duration = None
+        st.session_state.rec_budget = None
 
-        if perf < 3:
-            skills.append("Performance Improvement Plan")
-        if train < 2:
-            skills.append("Enroll in Training Programs")
+    if st.button("🎯 Find Matching Courses", use_container_width=True):
+        st.session_state.recommendation_active = True
+        st.session_state.recommendation_role = role
+        st.session_state.recommendation_perf = perf
+        st.session_state.rec_duration = max_duration
+        st.session_state.rec_budget = max_budget
 
-        st.markdown("### ✅ Recommended Skills / Actions")
-        for i, s in enumerate(skills, 1):
-            if "Improvement" in s or "Enroll" in s:
-                st.warning(f"⚠️ {i}. {s}")
+    if st.session_state.recommendation_active:
+        active_role = st.session_state.recommendation_role
+        active_perf = st.session_state.recommendation_perf
+        active_duration = st.session_state.rec_duration
+        active_budget = st.session_state.rec_budget
+        
+        all_skills = role_skills.get(active_role, [])
+        
+        # ── Dynamic Skill Filtering based on Sliders ──
+        filtered_skills = [
+            s for s in all_skills 
+            if s['cost_usd'] <= active_budget and s['duration_weeks'] <= active_duration
+        ]
+        
+        # Overlay performance logic
+        if active_perf <= 2:
+            st.info("💡 **Customized for you:** Highlighting essential foundational & core job skills.")
+            skills = [s for s in filtered_skills if s['level'] in ['Beginner', 'Intermediate']]
+        elif active_perf == 3:
+            st.info("💡 **Customized for you:** Balanced mix of Intermediate and Advanced upskilling.")
+            skills = [s for s in filtered_skills if s['level'] in ['Intermediate', 'Advanced']]
+        else:
+            st.info("💡 **Customized for you:** Advanced mastery and Leadership tracks for high performers.")
+            skills = [s for s in filtered_skills if s['level'] == 'Advanced']
+            
+        # Fallback if filters are too restrictive
+        if not skills:
+            if not filtered_skills:
+                st.warning("⚠️ No courses match your strict budget or duration filters. Showing all recommendations.")
+                skills = all_skills
             else:
-                st.success(f"✅ {i}. {s}")
+                skills = filtered_skills
+
+        st.markdown("---")
+        st.markdown(f"## 🚀 Learning Path for **{active_role}**")
+        
+        st.markdown("### ⚠️ Urgent Action Items")
+        if active_perf < 3:
+            st.error("📉 **Performance Improvement Plan:** Recommended based on recent performance rating.")
+        else:
+            st.info("No urgent action items. Keep up the good work!")
+
+        st.markdown("### ✅ Core Skills Checklist")
+        if not skills:
+            st.info("General Skills")
+        else:
+            total_skills = len(skills)
+            checked_count = 0
+            
+            # Using columns for each checklist item
+            for i, s in enumerate(skills, 1):
+                col_chk, col_exp = st.columns([0.5, 9.5])
+                with col_chk:
+                    # Checkbox for tracking progress (keys must be unique across the app)
+                    chk_key = f"chk_{active_role.replace(' ', '_')}_{i}"
+                    is_done = st.checkbox("Done", key=chk_key, label_visibility="collapsed")
+                    if is_done:
+                        checked_count += 1
+                
+                with col_exp:
+                    with st.expander(f"**Step {i}: {s['skill']}**  |  Level: {s['level']}  |  Impact: {s['impact']}", expanded=(not is_done)):
+                        c1, c2 = st.columns(2)
+                        c1.markdown(f"**🎯 Why?** {s['reason']}")
+                        c1.markdown(f"**💸 Salary Impact:** {s['impact']}")
+                        c1.markdown(f"**🔒 Prerequisites:** {s.get('prereq', 'None')}")
+                        
+                        c2.markdown(f"**🎓 Suggested Course:** {s['course']} ({s['provider']})")
+                        c2.markdown(f"**⏳ Duration:** {s['duration']}")
+                        c2.markdown(f"**💳 Estimated Cost:** {s.get('cost', 'Free')}")
+            
+            # Progress bar based on checks
+            st.markdown("### 📊 Overall Progress")
+            progress_frac = checked_count / total_skills
+            st.progress(progress_frac)
+            if progress_frac == 1.0:
+                st.success("🎉 **Amazing!** You've completed the recommended learning path for this role!")
+            else:
+                st.caption(f"**Current Progress:** {int(progress_frac * 100)}% ({checked_count}/{total_skills} skills attained)")
 
 # ════════════════════════════════════════════════════════════════════════════
 # PAGE 4 – Upload Data (dedicated page)
@@ -328,8 +557,8 @@ elif page == "📂 Upload Data":
     # ── Upload area ───────────────────────────────────────────────────────
     st.markdown("### Drop your file here or use the sidebar uploader")
     inline_file = st.file_uploader(
-        "Choose a CSV file",
-        type=["csv"],
+        "Choose a file (CSV, Excel, JSON, SQLite)",
+        type=["csv", "xlsx", "json", "sqlite", "db"],
         key="inline_uploader",
         help="Must contain all required columns listed above"
     )
@@ -339,11 +568,9 @@ elif page == "📂 Upload Data":
     if active_file is not None:
         st.markdown("---")
         try:
-            raw_bytes = active_file.read() if inline_file else open(
-                'employee_attrition_test.csv', 'rb').read()
-
             if inline_file:
-                df_preview = pd.read_csv(io.BytesIO(raw_bytes))
+                inline_file.seek(0)
+                df_preview = parse_uploaded_file(inline_file)
             else:
                 df_preview = df_raw.copy()
 
@@ -386,35 +613,20 @@ elif page == "📂 Upload Data":
                 with tab3:
                     c1, c2 = st.columns(2)
                     with c1:
-                        fig, ax = plt.subplots(figsize=(6, 4))
-                        sns.histplot(df_preview['MonthlyIncome'], kde=True, ax=ax, color='steelblue')
-                        ax.set_title("Monthly Income Distribution")
-                        ax.set_xlabel("Monthly Income (₹)")
-                        st.pyplot(fig)
-                        plt.close(fig)
+                        fig_up1 = px.histogram(df_preview, x="MonthlyIncome", nbins=30, title="Monthly Income Distribution", color_discrete_sequence=['steelblue'])
+                        st.plotly_chart(fig_up1, use_container_width=True)
                     with c2:
-                        fig2, ax2 = plt.subplots(figsize=(6, 4))
                         role_counts = df_preview['JobRole'].value_counts().reset_index()
                         role_counts.columns = ['JobRole', 'Count']
-                        sns.barplot(x='Count', y='JobRole', hue='JobRole', data=role_counts, ax=ax2, palette='magma', legend=False)
-                        ax2.set_title("Employees by Job Role")
-                        ax2.set_xlabel("Count")
-                        st.pyplot(fig2)
-                        plt.close(fig2)
+                        fig_up2 = px.bar(role_counts, x='Count', y='JobRole', orientation='h', title="Employees by Job Role", color="JobRole")
+                        st.plotly_chart(fig_up2, use_container_width=True)
 
                 st.markdown("---")
 
                 # ── Download template ─────────────────────────────────────
-                st.markdown("### 📥 Download Sample Template")
+                st.markdown("### 📥 Download Sample Templates")
                 sample_df = generate_data().head(10)
-                csv_bytes = sample_df.to_csv(index=False).encode('utf-8')
-                st.download_button(
-                    label="⬇️ Download CSV Template (10 rows)",
-                    data=csv_bytes,
-                    file_name="employee_template.csv",
-                    mime="text/csv",
-                    use_container_width=True
-                )
+                build_download_templates(sample_df)
 
         except Exception as e:
             st.error(f"❌ Error reading file: {e}")
@@ -425,14 +637,7 @@ elif page == "📂 Upload Data":
 
         st.markdown("### 📥 Don't have a file? Download our template!")
         sample_df = generate_data().head(10)
-        csv_bytes = sample_df.to_csv(index=False).encode('utf-8')
-        st.download_button(
-            label="⬇️ Download CSV Template (10 rows)",
-            data=csv_bytes,
-            file_name="employee_template.csv",
-            mime="text/csv",
-            use_container_width=True
-        )
+        build_download_templates(sample_df)
 
     # ── Show errors from sidebar upload ──────────────────────────────────
     if st.session_state.upload_errors and uploaded_file is not None:
