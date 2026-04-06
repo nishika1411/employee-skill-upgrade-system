@@ -171,44 +171,44 @@ def build_encoders_and_model(df_raw, force_retrain=False):
 # ── Skill map ─────────────────────────────────────────────────────────────────
 role_skills = {
     'Sales Executive': [
-        {"skill": "Advanced Negotiation", "reason": "Close high-value deals", "level": "Advanced", "course": "Negotiation Mastery", "provider": "Coursera", "duration": "4 weeks", "duration_weeks": 4, "impact": "High 💰", "cost": "$49", "cost_usd": 49, "prereq": "Basic Sales Strategy"},
-        {"skill": "Salesforce/CRM", "reason": "Improve pipeline management", "level": "Intermediate", "course": "Salesforce Admin", "provider": "Trailhead", "duration": "2 weeks", "duration_weeks": 2, "impact": "Medium 🚀", "cost": "Free", "cost_usd": 0, "prereq": "None"},
-        {"skill": "Public Speaking", "reason": "Boost confidence in pitches", "level": "Beginner", "course": "Dynamic Public Speaking", "provider": "Udemy", "duration": "3 weeks", "duration_weeks": 3, "impact": "Medium 🗣️", "cost": "$15", "cost_usd": 15, "prereq": "None"}
+        {"skill": "Advanced Negotiation", "reason": "Close high-value deals", "level": "Advanced", "course": "Negotiation Mastery", "provider": "Coursera", "duration": "4 weeks", "duration_weeks": 4, "impact": "High 💰", "cost": "₹4,000", "cost_inr": 4000, "prereq": "Basic Sales Strategy"},
+        {"skill": "Salesforce/CRM", "reason": "Improve pipeline management", "level": "Intermediate", "course": "Salesforce Admin", "provider": "Trailhead", "duration": "2 weeks", "duration_weeks": 2, "impact": "Medium 🚀", "cost": "Free", "cost_inr": 0, "prereq": "None"},
+        {"skill": "Public Speaking", "reason": "Boost confidence in pitches", "level": "Beginner", "course": "Dynamic Public Speaking", "provider": "Udemy", "duration": "3 weeks", "duration_weeks": 3, "impact": "Medium 🗣️", "cost": "₹1,200", "cost_inr": 1200, "prereq": "None"}
     ],
     'Research Scientist': [
-        {"skill": "Deep Learning", "reason": "AI research focus", "level": "Advanced", "course": "Deep Learning Specialization", "provider": "Coursera", "duration": "12 weeks", "duration_weeks": 12, "impact": "High 💰", "cost": "$49/mo", "cost_usd": 147, "prereq": "Python, Math"},
-        {"skill": "Statistical Modeling", "reason": "Experimental design", "level": "Intermediate", "course": "Bayesian Statistics", "provider": "edX", "duration": "6 weeks", "duration_weeks": 6, "impact": "High 📈", "cost": "$99", "cost_usd": 99, "prereq": "Basic Stats"},
-        {"skill": "Cloud Computing", "reason": "Scale experiments", "level": "Beginner", "course": "AWS Cloud Practitioner", "provider": "AWS", "duration": "2 weeks", "duration_weeks": 2, "impact": "Medium ☁️", "cost": "Free", "cost_usd": 0, "prereq": "None"}
+        {"skill": "Deep Learning", "reason": "AI research focus", "level": "Advanced", "course": "Deep Learning Specialization", "provider": "Coursera", "duration": "12 weeks", "duration_weeks": 12, "impact": "High 💰", "cost": "₹11,800", "cost_inr": 11800, "prereq": "Python, Math"},
+        {"skill": "Statistical Modeling", "reason": "Experimental design", "level": "Intermediate", "course": "Bayesian Statistics", "provider": "edX", "duration": "6 weeks", "duration_weeks": 6, "impact": "High 📈", "cost": "₹8,000", "cost_inr": 8000, "prereq": "Basic Stats"},
+        {"skill": "Cloud Computing", "reason": "Scale experiments", "level": "Beginner", "course": "AWS Cloud Practitioner", "provider": "AWS", "duration": "2 weeks", "duration_weeks": 2, "impact": "Medium ☁️", "cost": "Free", "cost_inr": 0, "prereq": "None"}
     ],
     'Laboratory Technician': [
-        {"skill": "Equipment Handling", "reason": "Lab safety/efficiency", "level": "Intermediate", "course": "Advanced Lab Techniques", "provider": "edX", "duration": "4 weeks", "duration_weeks": 4, "impact": "Medium 🔬", "cost": "$50", "cost_usd": 50, "prereq": "Safety Protocols"},
-        {"skill": "Data Analysis (R/Python)", "reason": "Doc and Analysis", "level": "Intermediate", "course": "Data Analysis with Python", "provider": "DataCamp", "duration": "6 weeks", "duration_weeks": 6, "impact": "High 📊", "cost": "$25/mo", "cost_usd": 38, "prereq": "None"},
-        {"skill": "Quality Control (GLP)", "reason": "Regulatory compliance", "level": "Beginner", "course": "Good Laboratory Practice", "provider": "Udemy", "duration": "1 week", "duration_weeks": 1, "impact": "Low 📋", "cost": "$15", "cost_usd": 15, "prereq": "None"}
+        {"skill": "Equipment Handling", "reason": "Lab safety/efficiency", "level": "Intermediate", "course": "Advanced Lab Techniques", "provider": "edX", "duration": "4 weeks", "duration_weeks": 4, "impact": "Medium 🔬", "cost": "₹4,000", "cost_inr": 4000, "prereq": "Safety Protocols"},
+        {"skill": "Data Analysis (R/Python)", "reason": "Doc and Analysis", "level": "Intermediate", "course": "Data Analysis with Python", "provider": "DataCamp", "duration": "6 weeks", "duration_weeks": 6, "impact": "High 📊", "cost": "₹3,000/mo", "cost_inr": 3000, "prereq": "None"},
+        {"skill": "Quality Control (GLP)", "reason": "Regulatory compliance", "level": "Beginner", "course": "Good Laboratory Practice", "provider": "Udemy", "duration": "1 week", "duration_weeks": 1, "impact": "Low 📋", "cost": "₹1,200", "cost_inr": 1200, "prereq": "None"}
     ],
     'Manufacturing Director': [
-        {"skill": "Lean Six Sigma", "reason": "Process optimization", "level": "Advanced", "course": "Six Sigma Green Belt", "provider": "Coursera", "duration": "8 weeks", "duration_weeks": 8, "impact": "High 💰", "cost": "$79", "cost_usd": 79, "prereq": "Management Exp."},
-        {"skill": "Supply Chain Mgmt", "reason": "Reduce delays/costs", "level": "Intermediate", "course": "Supply Chain Excellence", "provider": "edX", "duration": "5 weeks", "duration_weeks": 5, "impact": "High 📦", "cost": "$150", "cost_usd": 150, "prereq": "Basic Operations"},
-        {"skill": "Strategic Leadership", "reason": "Plant operations", "level": "Advanced", "course": "Executive Leadership", "provider": "Harvard Online", "duration": "6 weeks", "duration_weeks": 6, "impact": "Very High 👑", "cost": "$2000", "cost_usd": 2000, "prereq": "5+ yrs Leadership"}
+        {"skill": "Lean Six Sigma", "reason": "Process optimization", "level": "Advanced", "course": "Six Sigma Green Belt", "provider": "Coursera", "duration": "8 weeks", "duration_weeks": 8, "impact": "High 💰", "cost": "₹6,300", "cost_inr": 6300, "prereq": "Management Exp."},
+        {"skill": "Supply Chain Mgmt", "reason": "Reduce delays/costs", "level": "Intermediate", "course": "Supply Chain Excellence", "provider": "edX", "duration": "5 weeks", "duration_weeks": 5, "impact": "High 📦", "cost": "₹12,000", "cost_inr": 12000, "prereq": "Basic Operations"},
+        {"skill": "Strategic Leadership", "reason": "Plant operations", "level": "Advanced", "course": "Executive Leadership", "provider": "Harvard Online", "duration": "6 weeks", "duration_weeks": 6, "impact": "Very High 👑", "cost": "₹160,000", "cost_inr": 160000, "prereq": "5+ yrs Leadership"}
     ],
     'Healthcare Representative': [
-        {"skill": "Medical Device Knowledge", "reason": "Accurate pitching", "level": "Intermediate", "course": "MedTech Sales", "provider": "Udemy", "duration": "3 weeks", "duration_weeks": 3, "impact": "High 🩺", "cost": "$20", "cost_usd": 20, "prereq": "Life Sciences Degree"},
-        {"skill": "Healthcare Compliance", "reason": "Ethical sales", "level": "Beginner", "course": "HIPAA & Compliance", "provider": "CTG", "duration": "1 week", "duration_weeks": 1, "impact": "Medium ⚖️", "cost": "$40", "cost_usd": 40, "prereq": "None"},
-        {"skill": "Relationship Mgmt", "reason": "Build trust", "level": "Intermediate", "course": "B2B Relationship Sales", "provider": "LinkedIn", "duration": "2 weeks", "duration_weeks": 2, "impact": "Medium 🤝", "cost": "$30/mo", "cost_usd": 30, "prereq": "Basic Sales"}
+        {"skill": "Medical Device Knowledge", "reason": "Accurate pitching", "level": "Intermediate", "course": "MedTech Sales", "provider": "Udemy", "duration": "3 weeks", "duration_weeks": 3, "impact": "High 🩺", "cost": "₹1,600", "cost_inr": 1600, "prereq": "Life Sciences Degree"},
+        {"skill": "Healthcare Compliance", "reason": "Ethical sales", "level": "Beginner", "course": "HIPAA & Compliance", "provider": "CTG", "duration": "1 week", "duration_weeks": 1, "impact": "Medium ⚖️", "cost": "₹3,200", "cost_inr": 3200, "prereq": "None"},
+        {"skill": "Relationship Mgmt", "reason": "Build trust", "level": "Intermediate", "course": "B2B Relationship Sales", "provider": "LinkedIn", "duration": "2 weeks", "duration_weeks": 2, "impact": "Medium 🤝", "cost": "₹2,400/mo", "cost_inr": 2400, "prereq": "Basic Sales"}
     ],
     'Manager': [
-        {"skill": "Agile Project Mgmt", "reason": "Accelerate delivery", "level": "Intermediate", "course": "Agile Crash Course", "provider": "Udemy", "duration": "2 weeks", "duration_weeks": 2, "impact": "High 🚀", "cost": "$15", "cost_usd": 15, "prereq": "None"},
-        {"skill": "Conflict Resolution", "reason": "Team harmony", "level": "Intermediate", "course": "Managing Team Conflict", "provider": "Coursera", "duration": "3 weeks", "duration_weeks": 3, "impact": "Medium 🕊️", "cost": "$49", "cost_usd": 49, "prereq": "None"},
-        {"skill": "Financial Acumen", "reason": "Budget planning", "level": "Advanced", "course": "Finance for Managers", "provider": "Coursera", "duration": "4 weeks", "duration_weeks": 4, "impact": "High 💰", "cost": "$49", "cost_usd": 49, "prereq": "Basic Accounting"}
+        {"skill": "Agile Project Mgmt", "reason": "Accelerate delivery", "level": "Intermediate", "course": "Agile Crash Course", "provider": "Udemy", "duration": "2 weeks", "duration_weeks": 2, "impact": "High 🚀", "cost": "₹1,200", "cost_inr": 1200, "prereq": "None"},
+        {"skill": "Conflict Resolution", "reason": "Team harmony", "level": "Intermediate", "course": "Managing Team Conflict", "provider": "Coursera", "duration": "3 weeks", "duration_weeks": 3, "impact": "Medium 🕊️", "cost": "₹4,000", "cost_inr": 4000, "prereq": "None"},
+        {"skill": "Financial Acumen", "reason": "Budget planning", "level": "Advanced", "course": "Finance for Managers", "provider": "Coursera", "duration": "4 weeks", "duration_weeks": 4, "impact": "High 💰", "cost": "₹4,000", "cost_inr": 4000, "prereq": "Basic Accounting"}
     ],
     'Human Resources': [
-        {"skill": "Talent Analytics", "reason": "Improve hiring quality", "level": "Intermediate", "course": "People Analytics", "provider": "Wharton Online", "duration": "5 weeks", "duration_weeks": 5, "impact": "High 📈", "cost": "$199", "cost_usd": 199, "prereq": "HR Principles"},
-        {"skill": "Employer Branding", "reason": "Attract candidates", "level": "Intermediate", "course": "Brand Strategy", "provider": "LinkedIn", "duration": "2 weeks", "duration_weeks": 2, "impact": "Medium ✨", "cost": "$30", "cost_usd": 30, "prereq": "None"},
-        {"skill": "D&I Strategies", "reason": "Healthier workplace", "level": "Beginner", "course": "Diversity & Inclusion", "provider": "Coursera", "duration": "4 weeks", "duration_weeks": 4, "impact": "Medium 🌍", "cost": "$49", "cost_usd": 49, "prereq": "None"}
+        {"skill": "Talent Analytics", "reason": "Improve hiring quality", "level": "Intermediate", "course": "People Analytics", "provider": "Wharton Online", "duration": "5 weeks", "duration_weeks": 5, "impact": "High 📈", "cost": "₹16,000", "cost_inr": 16000, "prereq": "HR Principles"},
+        {"skill": "Employer Branding", "reason": "Attract candidates", "level": "Intermediate", "course": "Brand Strategy", "provider": "LinkedIn", "duration": "2 weeks", "duration_weeks": 2, "impact": "Medium ✨", "cost": "₹2,400", "cost_inr": 2400, "prereq": "None"},
+        {"skill": "D&I Strategies", "reason": "Healthier workplace", "level": "Beginner", "course": "Diversity & Inclusion", "provider": "Coursera", "duration": "4 weeks", "duration_weeks": 4, "impact": "Medium 🌍", "cost": "₹4,000", "cost_inr": 4000, "prereq": "None"}
     ],
     'Research Director': [
-        {"skill": "Grants Writing", "reason": "Secure budgeting", "level": "Advanced", "course": "Grant Writing 101", "provider": "edX", "duration": "4 weeks", "duration_weeks": 4, "impact": "Very High 💰", "cost": "$149", "cost_usd": 149, "prereq": "Research Exp."},
-        {"skill": "R&D Strategy", "reason": "Align with business", "level": "Advanced", "course": "Innovation Strategy", "provider": "MIT OpenCourseWare", "duration": "6 weeks", "duration_weeks": 6, "impact": "High 🧠", "cost": "Free", "cost_usd": 0, "prereq": "PhD/Leadership"},
-        {"skill": "Executive Comms", "reason": "Board presentations", "level": "Intermediate", "course": "Communicating for Impact", "provider": "LinkedIn", "duration": "2 weeks", "duration_weeks": 2, "impact": "Medium 🎙️", "cost": "$30", "cost_usd": 30, "prereq": "None"}
+        {"skill": "Grants Writing", "reason": "Secure budgeting", "level": "Advanced", "course": "Grant Writing 101", "provider": "edX", "duration": "4 weeks", "duration_weeks": 4, "impact": "Very High 💰", "cost": "₹12,000", "cost_inr": 12000, "prereq": "Research Exp."},
+        {"skill": "R&D Strategy", "reason": "Align with business", "level": "Advanced", "course": "Innovation Strategy", "provider": "MIT OpenCourseWare", "duration": "6 weeks", "duration_weeks": 6, "impact": "High 🧠", "cost": "Free", "cost_inr": 0, "prereq": "PhD/Leadership"},
+        {"skill": "Executive Comms", "reason": "Board presentations", "level": "Intermediate", "course": "Communicating for Impact", "provider": "LinkedIn", "duration": "2 weeks", "duration_weeks": 2, "impact": "Medium 🎙️", "cost": "₹2,400", "cost_inr": 2400, "prereq": "None"}
     ]
 }
 
@@ -436,7 +436,7 @@ elif page == "🎯 Skill Recommendation":
     with col2:
         st.markdown("##### 🎛️ Course Preferences")
         max_duration = st.slider("⏳ Max Course Duration (Weeks)", 1, 16, 12)
-        max_budget = st.slider("🎯 Max Budget per Course ($)", 0, 500, 200, step=25)
+        max_budget = st.slider("🎯 Max Budget per Course (₹)", 0, 200000, 20000, step=1000)
 
     if "recommendation_active" not in st.session_state:
         st.session_state.recommendation_active = False
@@ -463,7 +463,7 @@ elif page == "🎯 Skill Recommendation":
         # ── Dynamic Skill Filtering based on Sliders ──
         filtered_skills = [
             s for s in all_skills 
-            if s['cost_usd'] <= active_budget and s['duration_weeks'] <= active_duration
+            if s['cost_inr'] <= active_budget and s['duration_weeks'] <= active_duration
         ]
         
         # Overlay performance logic
