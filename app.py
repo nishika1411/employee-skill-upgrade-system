@@ -215,14 +215,14 @@ role_skills = {
 # ════════════════════════════════════════════════════════════════════════════
 # SIDEBAR
 # ════════════════════════════════════════════════════════════════════════════
-st.sidebar.title("🔍 Navigation")
+st.sidebar.title(" Navigation")
 page = st.sidebar.radio(
     "Go to",
-    ["📊 Dashboard", "💰 Salary Prediction", "🎯 Skill Recommendation", "📂 Upload Data"]
+    [" Dashboard", " Salary Prediction", "Skill Recommendation", " Upload Data"]
 )
 
 st.sidebar.markdown("---")
-st.sidebar.markdown("### 📂 Data Source")
+st.sidebar.markdown("### Data Source")
 
 # ── Upload widget in sidebar ──────────────────────────────────────────────────
 uploaded_file = st.sidebar.file_uploader(
@@ -271,9 +271,9 @@ if uploaded_file is not None:
 
 # ── Sidebar: show status ──────────────────────────────────────────────────────
 if st.session_state.uploaded_df is not None:
-    st.sidebar.success(f"✅ Using: **{st.session_state.upload_name}**  \n"
+    st.sidebar.success(f"Using: **{st.session_state.upload_name}**  \n"
                        f"({len(st.session_state.uploaded_df):,} rows)")
-    if st.sidebar.button("🔄 Reset to Default Data"):
+    if st.sidebar.button("Reset to Default Data"):
         st.session_state.uploaded_df   = None
         st.session_state.upload_errors = []
         st.session_state.upload_name   = None
@@ -281,7 +281,7 @@ if st.session_state.uploaded_df is not None:
         st.session_state.upload_model  = None
         st.rerun()
 elif st.session_state.upload_errors:
-    st.sidebar.error("❌ Upload failed")
+    st.sidebar.error(" Upload failed")
 else:
     st.sidebar.info("Using default dataset")
 
@@ -296,21 +296,21 @@ else:
 # ════════════════════════════════════════════════════════════════════════════
 # PAGE 1 – Dashboard & Skill Gap Analysis
 # ════════════════════════════════════════════════════════════════════════════
-if page == "📊 Dashboard":
-    st.title("📊 Enterprise Skill & Performance Dashboard")
+if page == " Dashboard":
+    st.title(" Enterprise Skill & Performance Dashboard")
     st.markdown("Monitor company-wide employee data, analyze skill gaps, and track learning progress.")
 
     tab_overview, tab_gap, tab_progress = st.tabs([
-        "🏢 Company Overview", "🔍 Skill Gap Analysis", "📈 Training Progress"
+        " Company Overview", "Skill Gap Analysis", " Training Progress"
     ])
 
     with tab_overview:
         st.markdown("### Overview of Employee Data")
         col1, col2, col3, col4 = st.columns(4)
-        col1.metric("👥 Total Employees", f"{len(df_raw):,}")
-        col2.metric("💵 Avg Monthly Income", f"₹{int(df_raw['MonthlyIncome'].mean()):,}")
-        col3.metric("📈 Avg Performance", f"{df_raw['PerformanceRating'].mean():.2f}")
-        col4.metric("⚖️ Avg Work-Life", f"{df_raw['WorkLifeBalance'].mean():.2f}")
+        col1.metric(" Total Employees", f"{len(df_raw):,}")
+        col2.metric(" Avg Monthly Income", f"₹{int(df_raw['MonthlyIncome'].mean()):,}")
+        col3.metric(" Avg Performance", f"{df_raw['PerformanceRating'].mean():.2f}")
+        col4.metric(" Avg Work-Life", f"{df_raw['WorkLifeBalance'].mean():.2f}")
 
         st.markdown("---")
         col_a, col_b = st.columns(2)
@@ -325,7 +325,7 @@ if page == "📊 Dashboard":
             st.plotly_chart(fig2, use_container_width=True)
 
     with tab_gap:
-        st.markdown("### 🔍 Skill Gap Risk Analysis")
+        st.markdown("###  Skill Gap Risk Analysis")
         st.info("A 'Skill Gap' is flagged when an employee's performance rating falls short of the target 4.0 standard.")
         
         df_gap = df_raw.copy()
@@ -346,10 +346,10 @@ if page == "📊 Dashboard":
             st.plotly_chart(fig4, use_container_width=True)
             
         high_risk_count = len(df_gap[(df_gap['SkillGap'] >= 1.5) & (df_gap['YearsAtCompany'] > 3)])
-        st.warning(f"🚨 **Action Required:** We found **{high_risk_count}** tenured employees (>3 yrs) with a significant skill gap. Consider allocating bootcamp budgets to upskill them immediately.")
+        st.warning(f"**Action Required:** We found **{high_risk_count}** tenured employees (>3 yrs) with a significant skill gap. Consider allocating bootcamp budgets to upskill them immediately.")
 
     with tab_progress:
-        st.markdown("### 📈 Corporate Up-skilling Tracker")
+        st.markdown("### Corporate Up-skilling Tracker")
         st.write("Track the adoption of learning initiatives across the enterprise.")
         
         # Simulate active enrollments based on TrainingTimesLastYear
@@ -358,15 +358,15 @@ if page == "📊 Dashboard":
         adoption_rate = active_learners / total_emp
         
         c1, c2, c3 = st.columns(3)
-        c1.metric("📚 Active Learners", f"{active_learners:,}")
-        c2.metric("🎯 Company Learning Goal", "80% Enrolled")
-        c3.metric("📊 Current Adoption", f"{int(adoption_rate*100)}%")
+        c1.metric(" Active Learners", f"{active_learners:,}")
+        c2.metric(" Company Learning Goal", "80% Enrolled")
+        c3.metric(" Current Adoption", f"{int(adoption_rate*100)}%")
         
         st.markdown("#### Progress towards Annual Up-skill Goal")
         st.progress(min(adoption_rate / 0.80, 1.0))
         
         st.markdown("---")
-        st.markdown("#### 🏆 Top Enrolled Courses (Simulated from Active Rules)")
+        st.markdown("####  Top Enrolled Courses (Simulated from Active Rules)")
         
         course_counts = {}
         for role, count in df_raw['JobRole'].value_counts().items():
@@ -387,8 +387,8 @@ if page == "📊 Dashboard":
 # ════════════════════════════════════════════════════════════════════════════
 # PAGE 2 – Salary Prediction
 # ════════════════════════════════════════════════════════════════════════════
-elif page == "💰 Salary Prediction":
-    st.title("💰 Salary Prediction")
+elif page == " Salary Prediction":
+    st.title(" Salary Prediction")
     st.markdown("Fill in employee details to predict their monthly income.")
 
     col1, col2 = st.columns(2)
@@ -407,7 +407,7 @@ elif page == "💰 Salary Prediction":
         experience    = st.slider("Total Working Years", 0, 40, 5)
         years_company = st.slider("Years At Company", 0, 40, 3)
 
-    if st.button("🔮 Predict Salary", use_container_width=True):
+    if st.button(" Predict Salary", use_container_width=True):
         dept = le_dict['Department'].transform([department])[0]
         role = le_dict['JobRole'].transform([job_role])[0]
 
@@ -419,24 +419,24 @@ elif page == "💰 Salary Prediction":
         ]])
 
         pred = model.predict(input_data)[0]
-        st.success(f"### 💵 Predicted Monthly Salary: ₹{int(pred):,}")
+        st.success(f"### Predicted Monthly Salary: ₹{int(pred):,}")
 
 # ════════════════════════════════════════════════════════════════════════════
 # PAGE 3 – Skill Recommendation
 # ════════════════════════════════════════════════════════════════════════════
-elif page == "🎯 Skill Recommendation":
-    st.title("🎯 Skill Upgrade Recommendations")
+elif page == " Skill Recommendation":
+    st.title(" Skill Upgrade Recommendations")
     st.markdown("Get personalised skill recommendations based on role and performance.")
 
     col1, col2 = st.columns(2)
     with col1:
-        st.markdown("##### 👩‍💼 Employee Details")
+        st.markdown("#####  Employee Details")
         role = st.selectbox("Job Role", list(role_skills.keys()))
         perf = st.slider("Performance Rating (1–4)", 1, 4, 3)
     with col2:
-        st.markdown("##### 🎛️ Course Preferences")
-        max_duration = st.slider("⏳ Max Course Duration (Weeks)", 1, 16, 12)
-        max_budget = st.slider("🎯 Max Budget per Course (₹)", 0, 200000, 20000, step=1000)
+        st.markdown("#####  Course Preferences")
+        max_duration = st.slider(" Max Course Duration (Weeks)", 1, 16, 12)
+        max_budget = st.slider(" Max Budget per Course (₹)", 0, 200000, 20000, step=1000)
 
     if "recommendation_active" not in st.session_state:
         st.session_state.recommendation_active = False
@@ -445,7 +445,7 @@ elif page == "🎯 Skill Recommendation":
         st.session_state.rec_duration = None
         st.session_state.rec_budget = None
 
-    if st.button("🎯 Find Matching Courses", use_container_width=True):
+    if st.button(" Find Matching Courses", use_container_width=True):
         st.session_state.recommendation_active = True
         st.session_state.recommendation_role = role
         st.session_state.recommendation_perf = perf
@@ -468,33 +468,33 @@ elif page == "🎯 Skill Recommendation":
         
         # Overlay performance logic
         if active_perf <= 2:
-            st.info("💡 **Customized for you:** Highlighting essential foundational & core job skills.")
+            st.info(" **Customized for you:** Highlighting essential foundational & core job skills.")
             skills = [s for s in filtered_skills if s['level'] in ['Beginner', 'Intermediate']]
         elif active_perf == 3:
-            st.info("💡 **Customized for you:** Balanced mix of Intermediate and Advanced upskilling.")
+            st.info(" **Customized for you:** Balanced mix of Intermediate and Advanced upskilling.")
             skills = [s for s in filtered_skills if s['level'] in ['Intermediate', 'Advanced']]
         else:
-            st.info("💡 **Customized for you:** Advanced mastery and Leadership tracks for high performers.")
+            st.info(" **Customized for you:** Advanced mastery and Leadership tracks for high performers.")
             skills = [s for s in filtered_skills if s['level'] == 'Advanced']
             
         # Fallback if filters are too restrictive
         if not skills:
             if not filtered_skills:
-                st.warning("⚠️ No courses match your strict budget or duration filters. Showing all recommendations.")
+                st.warning(" No courses match your strict budget or duration filters. Showing all recommendations.")
                 skills = all_skills
             else:
                 skills = filtered_skills
 
         st.markdown("---")
-        st.markdown(f"## 🚀 Learning Path for **{active_role}**")
+        st.markdown(f"##  Learning Path for **{active_role}**")
         
-        st.markdown("### ⚠️ Urgent Action Items")
+        st.markdown("###  Urgent Action Items")
         if active_perf < 3:
-            st.error("📉 **Performance Improvement Plan:** Recommended based on recent performance rating.")
+            st.error("**Performance Improvement Plan:** Recommended based on recent performance rating.")
         else:
             st.info("No urgent action items. Keep up the good work!")
 
-        st.markdown("### ✅ Core Skills Checklist")
+        st.markdown("###  Core Skills Checklist")
         if not skills:
             st.info("General Skills")
         else:
@@ -514,35 +514,35 @@ elif page == "🎯 Skill Recommendation":
                 with col_exp:
                     with st.expander(f"**Step {i}: {s['skill']}**  |  Level: {s['level']}  |  Impact: {s['impact']}", expanded=(not is_done)):
                         c1, c2 = st.columns(2)
-                        c1.markdown(f"**🎯 Why?** {s['reason']}")
-                        c1.markdown(f"**💸 Salary Impact:** {s['impact']}")
-                        c1.markdown(f"**🔒 Prerequisites:** {s.get('prereq', 'None')}")
+                        c1.markdown(f"** Why?** {s['reason']}")
+                        c1.markdown(f"** Salary Impact:** {s['impact']}")
+                        c1.markdown(f"** Prerequisites:** {s.get('prereq', 'None')}")
                         
-                        c2.markdown(f"**🎓 Suggested Course:** {s['course']} ({s['provider']})")
-                        c2.markdown(f"**⏳ Duration:** {s['duration']}")
-                        c2.markdown(f"**💳 Estimated Cost:** {s.get('cost', 'Free')}")
+                        c2.markdown(f"**Suggested Course:** {s['course']} ({s['provider']})")
+                        c2.markdown(f"** Duration:** {s['duration']}")
+                        c2.markdown(f"** Estimated Cost:** {s.get('cost', 'Free')}")
             
             # Progress bar based on checks
-            st.markdown("### 📊 Overall Progress")
+            st.markdown("### Overall Progress")
             progress_frac = checked_count / total_skills
             st.progress(progress_frac)
             if progress_frac == 1.0:
-                st.success("🎉 **Amazing!** You've completed the recommended learning path for this role!")
+                st.success(" **Amazing!** You've completed the recommended learning path for this role!")
             else:
                 st.caption(f"**Current Progress:** {int(progress_frac * 100)}% ({checked_count}/{total_skills} skills attained)")
 
 # ════════════════════════════════════════════════════════════════════════════
 # PAGE 4 – Upload Data (dedicated page)
 # ════════════════════════════════════════════════════════════════════════════
-elif page == "📂 Upload Data":
-    st.title("📂 Upload Your Employee Dataset")
+elif page == " Upload Data":
+    st.title(" Upload Your Employee Dataset")
     st.markdown(
         "Upload a custom CSV file to replace the default dataset. "
         "The model will automatically retrain on your data."
     )
 
     # ── Show required columns ─────────────────────────────────────────────
-    with st.expander("📋 Required CSV Columns", expanded=True):
+    with st.expander("Required CSV Columns", expanded=True):
         col_info = {
             "Column": REQUIRED_COLS,
             "Type": ["Integer", "String", "String", "Integer (1–5)",
@@ -577,17 +577,17 @@ elif page == "📂 Upload Data":
             missing_cols = validate_dataframe(df_preview)
 
             if missing_cols:
-                st.error(f"❌ Missing required columns: **{', '.join(missing_cols)}**")
+                st.error(f"Missing required columns: **{', '.join(missing_cols)}**")
                 st.markdown("Please check your file and re-upload with the correct columns.")
             else:
                 # ── Stats ─────────────────────────────────────────────────
-                st.success(f"✅ File validated successfully! **{len(df_preview):,}** rows loaded.")
+                st.success(f"File validated successfully! **{len(df_preview):,}** rows loaded.")
 
                 m1, m2, m3, m4 = st.columns(4)
-                m1.metric("📄 Total Rows",      f"{len(df_preview):,}")
-                m2.metric("📊 Total Columns",   len(df_preview.columns))
-                m3.metric("💵 Avg Income",      f"₹{int(df_preview['MonthlyIncome'].mean()):,}")
-                m4.metric("🧹 Duplicate Rows",  df_preview.duplicated().sum())
+                m1.metric(" Total Rows",      f"{len(df_preview):,}")
+                m2.metric(" Total Columns",   len(df_preview.columns))
+                m3.metric(" Avg Income",      f"₹{int(df_preview['MonthlyIncome'].mean()):,}")
+                m4.metric("Duplicate Rows",  df_preview.duplicated().sum())
 
                 st.markdown("---")
 
@@ -624,18 +624,18 @@ elif page == "📂 Upload Data":
                 st.markdown("---")
 
                 # ── Download template ─────────────────────────────────────
-                st.markdown("### 📥 Download Sample Templates")
+                st.markdown("###  Download Sample Templates")
                 sample_df = generate_data().head(10)
                 build_download_templates(sample_df)
 
         except Exception as e:
-            st.error(f"❌ Error reading file: {e}")
+            st.error(f" Error reading file: {e}")
 
     else:
         # ── Empty state ───────────────────────────────────────────────────
-        st.info("👈 Upload a CSV file using the sidebar or the uploader above to get started.")
+        st.info(" Upload a CSV file using the sidebar or the uploader above to get started.")
 
-        st.markdown("### 📥 Don't have a file? Download our template!")
+        st.markdown("### Don't have a file? Download our template!")
         sample_df = generate_data().head(10)
         build_download_templates(sample_df)
 
@@ -643,6 +643,6 @@ elif page == "📂 Upload Data":
     if st.session_state.upload_errors and uploaded_file is not None:
         st.markdown("---")
         st.error(
-            f"❌ Last upload failed — missing columns: "
+            f" Last upload failed — missing columns: "
             f"**{', '.join(st.session_state.upload_errors)}**"
         )
