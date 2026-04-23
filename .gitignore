@@ -30,8 +30,6 @@ env.bak/
 venv.bak/
 
 # Project specific
-*.pkl
-employee_attrition_test.csv
 
 # Streamlit config (optional)
 .streamlit/

@@ -424,7 +424,7 @@ elif page == " Salary Prediction":
 # ════════════════════════════════════════════════════════════════════════════
 # PAGE 3 – Skill Recommendation
 # ════════════════════════════════════════════════════════════════════════════
-elif page == " Skill Recommendation":
+elif page == "Skill Recommendation":
     st.title(" Skill Upgrade Recommendations")
     st.markdown("Get personalised skill recommendations based on role and performance.")
 
